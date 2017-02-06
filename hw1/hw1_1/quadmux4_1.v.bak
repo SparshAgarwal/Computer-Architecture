@@ -1,0 +1,14 @@
+module quadmux4_1(InA, InB, InC, InD, S, Out);
+	input [3:0] InA;
+	input [3:0] InB;
+	input [3:0] InC;
+	input [3:0] InD;
+	input [1:0] S;
+	output [3:0] Out; 
+
+	fourto1u2to1 a1(InA[0], InA[1], InA[2], InA[3], S, Out[0]);
+	fourto1u2to1 a2(InB[0], InB[1], InB[2], InB[3], S, Out[1]);
+	fourto1u2to1 a3(InC[0], InC[1], InC[2], InC[3], S, Out[2]);
+	fourto1u2to1 a4(InD[0], InD[1], InD[2], InD[3], S, Out[3]);
+   
+endmodule 
