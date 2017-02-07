@@ -5,7 +5,7 @@ module shifter (In, Cnt, Op, Out);
    input [1:0]  Op;
    output [15:0] Out;
 
-	(Cnt[3]&1'b1)?{
+	Cnt[3]&1'b1?{
 		bit16_2to1mux(Op==2'd0,In[15:0],{In[7:0],In[15:8]},In[15:0]);
 		bit16_2to1mux(Op==2'd1,In[15:0],{In[7:0],8'b0},In[15:0]);
 		bit16_2to1mux(Op==2'd2,In[15:0],{{In[15]{8}},In[15:8]},In[15:0]);	
