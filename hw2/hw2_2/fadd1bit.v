@@ -1,10 +1,10 @@
-module fadd1bit (A, B, Cin, S, p,q);
+module fadd1bit (A, B, Cin, S, p,g);
 	input A;
 	input B;
 	input Cin;
 	output S;
-	output p;
-	output g; 
+	output [0:0]p;
+	output [0:0]g; 
 	wire w1;
 	wire w2;
 	wire w3;
