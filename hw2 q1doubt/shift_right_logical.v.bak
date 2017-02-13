@@ -1,0 +1,10 @@
+module shift_right_logical(input [3:0]S,[15:0]A,B,
+			output [15:0]Out);
+
+	bit16_2to1mux a1(S[3],In,{8'b00000000,In[15:8]},In);
+	bit16_2to1mux a2(S[2],In,{4'b0000,In[15:4]},In);
+	bit16_2to1mux a3(S[1],In,{2'b00,In[15:2]},In);
+	bit16_2to1mux a4(S[0],In,{1'b0,In[15:1]},In);
+
+
+endmodule

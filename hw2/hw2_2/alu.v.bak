@@ -10,16 +10,11 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Ofl, Z);
         output [15:0] Out;
         output Ofl;
         output Z;
-
 	reg [15:0]value;
-	reg zero_value = 0'b0;
-	wire [15:0] w1,w2,w3,w4,cout;
-
+	wire [15:0] w1,w2,w3,w4;
+	
 	assign A = invA? ~A:A;
 	assign B = invB? ~B:B;
-	
-	carry_lookahead_16bit a1(A,b,Cin,cout,Out)
-	assign Ofl = sign?((A[15]~^B[15])&cout? 1'b1:1'b0 ):1'b0;
 
 	shifter s1(A, B[3:0], Op[1:0], w1);
 	shifter s2(A, B[3:0], Op[1:0], w2);
@@ -60,6 +55,5 @@ always @ (*) begin
 end
 
 assign Out=value;
-assign Z=zero_value;
     
 endmodule

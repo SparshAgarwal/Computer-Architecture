@@ -1,0 +1,11 @@
+module rotate_left(input [3:0]S,[15:0]A,B,
+			output [15:0]Out);
+
+	bit16_2to1mux a1(S[3],In,{A[7:0],In[15:8]},In);
+	bit16_2to1mux a2(S[2],In,{A[11:0],In[15:12]},In);
+	bit16_2to1mux a3(S[1],In,{A[13:0],In[15:14]},In);
+	bit16_2to1mux a4(S[0],In,{A[14:0],In[15]},In);
+
+
+endmodule
+

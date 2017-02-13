@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/u/s/p/sparsh/Desktop/Computer Architecture/hw2/hw2_1
+T_opt
+!s110 1486962129
+V@1I3?XYzhz7d3<f3[8][i2
+04 18 4 work shifter_hier_bench fast 0
+=1-f8bc127a07e4-58a13dd0-c5c64-49c6
+o-quiet -auto_acc_if_foreign -work __work +acc
+n@_opt
+OE;O;10.4c;61
+vclkrst
+Z1 !s110 1486962127
+!i10b 1
+!s100 c^DJe8Tm9AS?OSo>b>@Xo1
+IhEjhn3C>:Y:9S9HJNbN002
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1486949398
+8clkrst.v
+Fclkrst.v
+L0 12
+Z4 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z5 !s108 1486962127.000000
+Z6 !s107 shifter.v|shifter_hier.v|shifter_hier_bench.v|clkrst.v|
+Z7 !s90 +define+RANDSEED=3|-work|__work|clkrst.v|shifter_hier_bench.v|shifter_hier.v|shifter.v|
+!i113 0
+Z8 o-work __work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 +define+RANDSEED=3 -work __work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vshifter
+R1
+!i10b 1
+!s100 [h@ZQicZ5i8J:EDXoLfAP2
+IzbKoO3k2XUPi6QJL1JW`N0
+R2
+R0
+w1486961283
+8shifter.v
+Fshifter.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+vshifter_hier
+R1
+!i10b 1
+!s100 `Jn88BVHFG0bQDCTKPYQ=3
+I4RI`=2oo5OYdza^g?UY@T3
+R2
+R0
+R3
+8shifter_hier.v
+Fshifter_hier.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+vshifter_hier_bench
+R1
+!i10b 1
+!s100 US@<HA=D:=7JCUIQKKgW51
+Ih@MO8F>a2kNZ9OAOVf`PX0
+R2
+R0
+R3
+8shifter_hier_bench.v
+Fshifter_hier_bench.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
