@@ -13,49 +13,36 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Ofl, Z);
 
 	reg [15:0]value;
 	reg zero_value = 0'b0;
-	wire [15:0] w1,w2,w3,w4,cout;
+	wire [15:0] sA,sB,w1,w2,w3,w4,w5,cout;
 
-	assign A = invA? ~A:A;
-	assign B = invB? ~B:B;
+	assign sA = invA? ~A:A;
+	assign sB = invB? ~B:B;
 	
-	carry_lookahead_16bit a1(A,b,Cin,cout,Out)
-	assign Ofl = sign?((A[15]~^B[15])&cout? 1'b1:1'b0 ):1'b0;
+	carry_lookahead_16bit a1(sA,b,Cin,cout,w5)
+	assign Ofl = sign?((sA[15]~^sB[15])&cout? 1'b1:1'b0 ):1'b0;
 
-	shifter s1(A, B[3:0], Op[1:0], w1);
-	shifter s2(A, B[3:0], Op[1:0], w2);
-	shifter s3(A, B[3:0], Op[1:0], w3);
-	shifter s4(A, B[3:0], Op[1:0], w4);
-
+	shifter s1(sA, sB[3:0], Op[1:0], w1);
 
 always @ (*) begin
-	case(Op)
-		3'o0:begin
+	casex(Op)
+		3'b0??:begin
 			value = w1;
 		end
-		3'o1:begin
-			value = w2;
-		end
-		3'o2:begin
-			value = w3;
-		end
-		3'o3:begin
-			value = w4;
-		end
 		3'o4:begin
-			value = w4;
+			value = w5;
 		end
 		3'o5:begin
-			value = A|B;
+			value = sA|sB;
 		end
 		3'o6:begin
-			value = A^B;
+			value = sA^sB;
 		end
 		3'o7:begin
-			value = A&B;
+			value = sA&sB;
 		end
 		default: begin
-	        	value =A;
-	        end
+			$display("Error");
+	    end
 	endcase
 end
 
