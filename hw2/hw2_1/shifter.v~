@@ -39,6 +39,5 @@ always @ (*) begin
 end
 
 assign Out=value;
-
 endmodule
 
