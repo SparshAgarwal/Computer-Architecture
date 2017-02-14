@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 d/u/s/p/sparsh/Desktop/Computer Architecture/hw2/hw2_2
 T_opt
-!s110 1487027388
-V^[Fhnzh@_i9jG@KjKSQFX1
+!s110 1487090586
+VNPi^?hLcaj;5]GNTeL8Jf2
 04 14 4 work alu_hier_bench fast 0
-=1-f8bc127a07e4-58a23cbc-67f67-76cf
+=1-f8bc127a0d9f-58a3339a-2dd31-3161
 o-quiet -auto_acc_if_foreign -work __work +acc
 n@_opt
 OE;O;10.4c;61
 valu
-Z1 !s110 1487027387
+Z1 !s110 1487090585
 !i10b 1
-!s100 EKbPNCTXATDii>SPz@0nR3
-I[OF?lcPKLnziNA3:de9L>3
+!s100 HM>6R^iSkcYUzfd[@?6H72
+IW[1[O14O@HcT3LDPgC0K40
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1487025089
+w1487045726
 8alu.v
 Falu.v
 L0 1
@@ -31,7 +31,7 @@ Z3 OE;L;10.4c;61
 r1
 !s85 0
 31
-Z4 !s108 1487027387.000000
+Z4 !s108 1487090585.000000
 Z5 !s107 xor2.v|shifter.v|nand2.v|fadd1bit.v|clkrst.v|carry_lookahead_4bit.v|carry_lookahead_16bit.v|alu.v|alu_hier.v|alu_hier_bench.v|
 Z6 !s90 +define+RANDSEED=3|-work|__work|alu_hier_bench.v|alu_hier.v|alu.v|carry_lookahead_16bit.v|carry_lookahead_4bit.v|clkrst.v|fadd1bit.v|nand2.v|shifter.v|xor2.v|
 !i113 0
@@ -82,11 +82,11 @@ R8
 vcarry_lookahead_16bit
 R1
 !i10b 1
-!s100 gkn4bPf[RMCmliO0BZ3S_3
-IVlA6kTYhaUEGF9d4SL0bH2
+!s100 lLDD^MoaVBIbkoF9`Ok]03
+ICOD[QbP[MmAfKfjze2WM31
 R2
 R0
-w1487025394
+Z9 w1487043204
 8carry_lookahead_16bit.v
 Fcarry_lookahead_16bit.v
 L0 1
@@ -103,11 +103,11 @@ R8
 vcarry_lookahead_4bit
 R1
 !i10b 1
-!s100 `m6gA6cWYUG]7WZ9BohG?1
-ImgGH9oO7jL_^iV<f]K?o33
+!s100 <N5^^lmoABa50U;c_hQg50
+IfThYS83f<<m:K@@I;>_Hj1
 R2
 R0
-w1487025938
+w1487044792
 8carry_lookahead_4bit.v
 Fcarry_lookahead_4bit.v
 L0 1
@@ -145,11 +145,11 @@ R8
 vfadd1bit
 R1
 !i10b 1
-!s100 cMbZ7cZBP5W39C>SQRjd>0
-I;@0bU0:`@QkQYjYMU5cNF2
+!s100 lW9A4i<k^TIcn2;1CY`=g0
+I?6f<fV`Q<f=7PG``_ZVOU1
 R2
 R0
-w1487027375
+R9
 8fadd1bit.v
 Ffadd1bit.v
 L0 1
@@ -170,7 +170,7 @@ R1
 I=JOS]oeg2cXTUI@l1HX0D3
 R2
 R0
-Z9 w1486973720
+Z10 w1486973720
 8nand2.v
 Fnand2.v
 L0 1
@@ -212,7 +212,7 @@ R1
 I8<RXMBE=C[I20l_1JV^@o1
 R2
 R0
-R9
+R10
 8xor2.v
 Fxor2.v
 L0 1

@@ -12,8 +12,9 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Ofl, Z);
         output Z;
 
 	reg [15:0]value;
-	wire [15:0]sA,sB,w1,w2,w3,w4,w5,cout;
-	reg ofl;
+	wire [15:0]sA,sB,w1,w5;
+	wire cout;
+	reg ofl = 1'b0;
 
 	assign sA = invA? ~A:A;
 	assign sB = invB? ~B:B;
@@ -30,7 +31,7 @@ always @ (*) begin
 		end
 		3'o4:begin
 			value = w5;
-			assign ofl = sign?(((sA[15]~^sB[15])&cout)? 1'b1:1'b0 ):1'b0;
+			assign ofl = sign?(((sA[15]~^sB[15])&(cout^sB[15]))? 1'b1:1'b0 ):(cout? 1'b1:1'b0 );
 		end
 		3'o5:begin
 			value = sA|sB;
@@ -47,6 +48,7 @@ always @ (*) begin
 	endcase
 end
 
+assign Ofl = ofl;
 assign Out=value;
 assign Z=&value;
     
