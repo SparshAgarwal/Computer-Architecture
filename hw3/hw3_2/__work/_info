@@ -9,15 +9,15 @@ z2
 cModel Technology
 Z0 d/u/s/p/sparsh/Desktop/Computer Architecture/hw3/hw3_2
 T_opt
-!s110 1487544019
-VaXUYV5l1G^Z1P>g6o5E<D0
+!s110 1487881388
+VQL`:8AWoBon]6H7@[zHIa2
 04 8 4 work sc_bench fast 0
-=1-f8bc1290f698-58aa1ed3-4b885-2f6a
+=1-f8bc127a0cd6-58af44ab-61a35-5792
 o-quiet -auto_acc_if_foreign -work __work +acc
 n@_opt
 OE;O;10.4c;61
 vclkrst
-Z1 !s110 1487544018
+Z1 !s110 1487881385
 !i10b 1
 !s100 d1=HFa9@5T7JH2L8mb3gE1
 I76^B^z0K=`bfSS`caA`Ik3
@@ -31,7 +31,7 @@ Z3 OE;L;10.4c;61
 r1
 !s85 0
 31
-Z4 !s108 1487544018.000000
+Z4 !s108 1487881385.000000
 Z5 !s107 sc.v|sc_hier.v|sc_bench.v|dff.v|clkrst.v|
 Z6 !s90 +define+RANDSEED=3|-work|__work|clkrst.v|dff.v|sc_bench.v|sc_hier.v|sc.v|
 !i113 0

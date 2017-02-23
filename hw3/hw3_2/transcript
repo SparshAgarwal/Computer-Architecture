@@ -1,7 +1,3 @@
-# vsim -c sc_bench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 16:40:19 on Feb 19,2017
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: sc.v(15): (vopt-2182) 'counter' might be read before written in always_comb or always @* block.
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
 # //
@@ -17,63 +13,4 @@
 # //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
-# Loading work.sc_bench(fast)
-# Loading work.sc_hier(fast)
-# Loading work.clkrst(fast)
-# Loading work.sc(fast)
-# log -howmany -rec /* 
-# 23
-#  run -all
-# OKAY :: ctr_rst = 0 : out = expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 0
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 2
-# OKAY :: ctr_rst = 1 : out = expected_out = 0
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 2
-# OKAY :: ctr_rst = 1 : out = expected_out = 0
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 1
-# OKAY :: ctr_rst = 1 : out = expected_out = 0
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 1
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 2
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 3
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 2
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 2
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 3
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 4
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 5
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# OKAY :: ctr_rst = 0 : out = expected_out = 1
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 2
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 3
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# ERRORCHECK :: ctr_rst = 1 : out = 0 : expected_out = 1
-# ERRORCHECK :: ctr_rst = 0 : out = 1 : expected_out = 0
-# TEST FAILED
-# ** Note: $finish    : sc_bench.v(31)
-#    Time: 4800 ns  Iteration: 0  Instance: /sc_bench
-# End time: 16:40:20 on Feb 19,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
+# dump.wlf opened as dataset "dataset"
