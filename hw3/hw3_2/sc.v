@@ -35,6 +35,7 @@ module sc( clk, rst, ctr_rst, out, err);
 		counter = rst?3'b000:counter;
 	end  
 assign out = counter;
+//hello
 endmodule
 
 // DUMMY LINE FOR REV CONTROL :1:

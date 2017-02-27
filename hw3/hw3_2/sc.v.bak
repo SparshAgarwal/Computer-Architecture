@@ -12,7 +12,6 @@ module sc( clk, rst, ctr_rst, out, err);
 	reg[2:0] counter;
 	
 	always@(*)begin
-		counter = rst?3'b000:counter;
 		casex(counter)
 			3'b000:begin
 					counter = ctr_rst?3'b000:3'b001;
@@ -33,6 +32,7 @@ module sc( clk, rst, ctr_rst, out, err);
 					$display("error");
 				end
 		endcase
+		counter = rst?3'b000:counter;
 	end  
 assign out = counter;
 endmodule
