@@ -18,7 +18,8 @@ module rf_bypass (
    output [15:0] read2data;
    output        err;
 
-   // your code
-
+  	rf r1(read1data,read2data,err,clk,rst,read1regsel,read2regsel,writeregsel,writedata,write);
+	
+	
 endmodule
 // DUMMY LINE FOR REV CONTROL :1:
