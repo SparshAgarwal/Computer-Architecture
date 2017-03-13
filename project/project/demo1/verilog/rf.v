@@ -7,22 +7,21 @@ module rf (
            // Inputs
            clk, rst, read1regsel, read2regsel, writeregsel, writedata, write
            );
-		   
-   parameter WIDTH = 16;
+
    input clk, rst;
    input [2:0] read1regsel;
    input [2:0] read2regsel;
    input [2:0] writeregsel;
-   input [WIDTH-1:0] writedata;
+   input [15:0] writedata;
    input        write;
 
-   output [WIDTH-1:0] read1data;
-   output [WIDTH-1:0] read2data;
+   output [15:0] read1data;
+   output [15:0] read2data;
    output        err;
    
-   wire [WIDTH-1:0] in0, in1, in2, in3, in4, in5, in6, in7;
-   wire[WIDTH-1:0] readout0, readout1, readout2, readout3, readout4, readout5, readout6, readout7;
-   reg[WIDTH-1:0] read1, read2;
+   wire [15:0] in0, in1, in2, in3, in4, in5, in6, in7;
+   wire[15:0] readout0, readout1, readout2, readout3, readout4, readout5, readout6, readout7;
+   reg[15:0] read1, read2;
    
   reg16bit reg0 (.out(readout0), .in(in0), .clk(clk), .reset(rst));
   reg16bit reg1 (.out(readout1), .in(in1), .clk(clk), .reset(rst));
