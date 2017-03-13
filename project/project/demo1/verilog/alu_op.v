@@ -12,6 +12,9 @@ output reg [4:0]Op;
 		5'b00000: begin  //halt
 		end
 
+		5'b00001: begin  //nop
+		end
+
 		5'b01000: begin  //addi
 			Cin = 0;
 	        Op = 5'b00100; //A+B
@@ -234,7 +237,7 @@ output reg [4:0]Op;
 		end
 
 		default: begin
-			err = 1'b1;
+			err = 1;
 		end
 		
 		endcase

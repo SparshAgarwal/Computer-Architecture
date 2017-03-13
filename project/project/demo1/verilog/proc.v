@@ -18,7 +18,7 @@ module proc (/*AUTOARG*/
   wire [4:0] aluOp, op;
   wire [2:0] writereg1, writereg2, writeregsel;
   wire [1:0] regDesSel, jriSel;
-  wire halt, jump, branch, memRdEn, regWrSel, memWrEn, aluSrcSel, regWrEn, opCtrlErr, pcCtrlErr, branchCon, extendSign, cin, invA, invB, sign, aluCtrlErr, data1Sel, aluErr, ofl, zeroFlag, r7Sel, zero;
+  wire halt, jump, branch, memRdEn, regWrSel, memWrEn, aluSrcSel, regWrEn, opCtrlErr, branchCon, extendSign, cin, invA, invB, sign, aluCtrlErr, data1Sel, aluErr, ofl, zeroFlag, r7Sel, zero;
   ///////////////////////////////////////////////////////////////////////////////////////////////////
   //TODO halt
   wire one;
@@ -47,7 +47,6 @@ module proc (/*AUTOARG*/
                 .pcCurrent(pcCurrent), 
                 .readAdd(pcNext), 
                 .plus2Out(plus2Out), 
-                .err(pcCtrlErr),
                 .branchCon(branchCon));
    
 
@@ -82,7 +81,7 @@ module proc (/*AUTOARG*/
    assign memAluData = regWrSel ? memDataOut : mainALUresult; 
    
    // OR all the err ouputs for every sub-module and assign it as this err output
-   assign err = opCtrlErr | pcCtrlErr | aluErr | aluCtrlErr;
+   assign err = opCtrlErr | aluErr | aluCtrlErr;
    
    // As desribed in the homeworks, use the err signal to trap corner
    // cases that you think are illegal in your statemachines

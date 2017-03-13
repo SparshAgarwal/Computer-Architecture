@@ -44,7 +44,7 @@ always @ (*) begin
 			shiftType = Op[1:0];
 			value = w1;
 		end
-		5'b00100:begin
+		5'b00100:begin //add
 			branchCon = 1; //jump for J and JAL
 			value = w5;
 			ofl = sign?(((sA[15]~^sB[15])&(cout^sB[15]))? 1'b1:1'b0 ):(cout? 1'b1:1'b0 );
@@ -72,13 +72,12 @@ always @ (*) begin
 			branchCon = value==1?1:0;
 		end
 		5'b01011:begin
-			value = (w5[15]==1'b1)?1:0;
+			value = (w5[15]&~sA[15]&~B[15])|(w5[15]&sA[15]&B[15])|(sA[15]&~B[15]);
 			branchCon = value==1?1:0;
 		end
 		5'b01100:begin
 			branchCon = 0;
-			value = (w5[15]==1'b1)?1:
-					(sA==~sB?1:0);
+			value = (w5[15]&~sA[15]&~B[15])|(w5[15]&sA[15]&B[15])|(sA[15]&~B[15])|(A==B);
 		end
 		5'b01101:begin
 			branchCon = 0;

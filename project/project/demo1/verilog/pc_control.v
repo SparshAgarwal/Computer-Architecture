@@ -1,9 +1,8 @@
-module pc_control(jump, branch, imm, pcCurrent, mainALUresult, readAdd, plus2Out, err ,branchCon);
+module pc_control(jump, branch, imm, pcCurrent, mainALUresult, readAdd, plus2Out, branchCon);
 
 input jump, branch, branchCon;
 input [15:0] imm, mainALUresult,pcCurrent;
 output [15:0] readAdd, plus2Out;
-output err;
 
 wire aluOfl, aluZero, zero;
 wire plus2Ofl, plus2Zero, pcSrc1 ;
@@ -22,6 +21,5 @@ assign pcSrc2 = pcSrc1 ? aluResult : plus2Out;
 assign readAddWire = jump ? mainALUresult : pcSrc2;
 assign readAdd = readAddWire;
 assign plus2Out = plus2OutWire;
-assign err = plus2Ofl | aluOfl;
 
 endmodule
