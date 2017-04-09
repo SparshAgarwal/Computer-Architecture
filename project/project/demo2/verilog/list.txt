@@ -1,0 +1,16 @@
+additionLogic.v
+alu.v
+alu_op.v
+dff.v
+extendImm.v
+fourBitCLA.v
+memory2c.syn.v
+op_control.v
+pc_control.v
+PFA.v
+proc.v
+reg16bit.v
+rf.v
+shifter.v
+simpleAlu.v
+sixteenBitCLA.v
