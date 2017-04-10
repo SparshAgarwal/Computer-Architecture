@@ -1,23 +1,21 @@
-module pc_control(jump, branch, imm, pcCurrent, mainALUresult, readAdd, plus2Out, branchCon);
+module pc_control(stall, jump, branch, pcCurrent, mainALUresult, readAdd, plus2Out, branchCon, simpleALUResult);
 
-input jump, branch, branchCon;
-input [15:0] imm, mainALUresult,pcCurrent;
+input jump, branch, branchCon, stall;
+input [15:0] mainALUresult, pcCurrent, simpleALUResult;
 output [15:0] readAdd, plus2Out;
 
 wire aluOfl, aluZero, zero;
 wire plus2Ofl, plus2Zero, pcSrc1 ;
-wire [15:0]  aluResult, readAddWire, pcSrc2, plus2OutWire, two;
+wire [15:0]  readAddWire, pcSrc2, plus2OutWire, plus2B;
 wire [2:0] addition;
  
-assign two = 16'd2;
 assign addition = 3'b100;
 assign zero = 0;
-
-simpleAlu plus2(.A(pcCurrent), .B(two), .Cin(zero), .Op(addition), .sign(zero), .Out(plus2OutWire), .Ofl(plus2Ofl), .Z(plus2Zero));
-simpleAlu pcALU(.A(plus2OutWire), .B(imm), .Cin(zero), .Op(addition), .sign(zero), .Out(aluResult), .Ofl(aluOfl), .Z(aluZero));
+assign plus2B = stall? 0:16'd2;
+simpleAlu plus2(.A(pcCurrent), .B(plus2B), .Cin(zero), .Op(addition), .sign(zero), .Out(plus2OutWire), .Ofl(plus2Ofl), .Z(plus2Zero));
 
 assign pcSrc1 = branch & branchCon;
-assign pcSrc2 = pcSrc1 ? aluResult : plus2Out;
+assign pcSrc2 = pcSrc1 ? simpleALUResult : plus2Out;
 assign readAddWire = jump ? mainALUresult : pcSrc2;
 assign readAdd = readAddWire;
 assign plus2Out = plus2OutWire;

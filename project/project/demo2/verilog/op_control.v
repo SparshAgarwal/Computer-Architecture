@@ -40,6 +40,7 @@ assign aluOp = opcode;
 			extendSign = 0;
 			data1Sel = 0;
 			r7Sel = 0;
+			
 		end
 		
 		5'b01000: begin //ADDI
@@ -56,6 +57,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b01001: begin //SUBI
@@ -72,6 +74,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b01010: begin //XORI
@@ -88,6 +91,7 @@ assign aluOp = opcode;
 			extendSign = 0; //zero extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b01011: begin //ANDNI
@@ -104,6 +108,7 @@ assign aluOp = opcode;
 			extendSign = 0; //zero extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10100: begin //ROLI
@@ -120,6 +125,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10101: begin //SLLI
@@ -136,6 +142,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10110: begin //RORI
@@ -152,6 +159,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10111: begin //SRLI
@@ -168,6 +176,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10000: begin //ST
@@ -184,6 +193,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10001: begin //LD
@@ -200,6 +210,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b10011: begin //STU
@@ -216,6 +227,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end
 		
 		5'b11001: begin //BTR
@@ -232,6 +244,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care, not extending
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end	
 		
 		5'b1101?: begin //ADD, SUB, XOR, ANDN, ROL, SLL, ROR, SRL
@@ -248,6 +261,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care, not extending
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end	
 		
 		5'b111??: begin //SEQ, SLT, SLE, SCO
@@ -264,6 +278,7 @@ assign aluOp = opcode;
 			extendSign = 0; //don't care, not extending
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end	
 		
 		5'b011??: begin //BEQZ, BNEZ, BLTZ, BGEZ
@@ -280,6 +295,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end			
 		
 		5'b11000: begin //LBI		
@@ -296,6 +312,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 0; //ALU input A is zero
 			r7Sel = 0;
+			
 		end	
 		
 		5'b10010: begin //SLBI
@@ -312,6 +329,7 @@ assign aluOp = opcode;
 			extendSign = 0; //zero extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end	
 		
 		5'b00100: begin //J
@@ -328,6 +346,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 0; //don't care - not using ALU
 			r7Sel = 0;
+			
 		end	
 		
 		5'b00101: begin //JR
@@ -344,6 +363,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 0;
+			
 		end	
 		
 		5'b00110: begin //JAL
@@ -360,6 +380,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 0; //don't care
 			r7Sel = 1;
+			
 		end	
 		
 		5'b00111: begin //JALR
@@ -376,6 +397,7 @@ assign aluOp = opcode;
 			extendSign = 1; //sign extend
 			data1Sel = 1; //ALU input is register data
 			r7Sel = 1;
+			
 		end			
 		
 		default: begin
