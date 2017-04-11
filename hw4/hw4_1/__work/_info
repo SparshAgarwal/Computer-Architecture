@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/u/s/p/sparsh/Desktop/Computer Architecture/hw4/hw4_1
+T_opt
+!s110 1490858474
+V;zn_;1TPL2Z`o4VZ[8IcR2
+04 10 4 work fifo_bench fast 0
+=1-f8bc129404ab-58dcb1ea-bf3a4-5437
+o-quiet -auto_acc_if_foreign -work __work +acc
+n@_opt
+OE;O;10.4c;61
+vclkrst
+Z1 !s110 1490858473
+!i10b 1
+!s100 d1=HFa9@5T7JH2L8mb3gE1
+I76^B^z0K=`bfSS`caA`Ik3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1490799831
+8clkrst.v
+Fclkrst.v
+L0 12
+Z4 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z5 !s108 1490858473.000000
+Z6 !s107 fifo.v|fifo_hier.v|fifo_bench.v|dff.v|clkrst.v|
+Z7 !s90 +define+RANDSEED=3|-work|__work|clkrst.v|dff.v|fifo_bench.v|fifo_hier.v|fifo.v|
+!i113 0
+Z8 o-work __work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 +define+RANDSEED=3 -work __work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdff
+R1
+!i10b 1
+!s100 ocZMMJaQcW@V^7b`LBG;g2
+I_HM6UhFP^>?OXhKMOR9@J3
+R2
+R0
+R3
+8dff.v
+Fdff.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+vfifo
+R1
+!i10b 1
+!s100 J]EViU4IV7G[1TOc^jmWX0
+IY_:AjbJ4=1]KOJG9@^8iI2
+R2
+R0
+w1490856992
+8fifo.v
+Ffifo.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+vfifo_bench
+R1
+!i10b 1
+!s100 kDBnN4]XaT[?PG64J@`nF2
+IDKhN?P2e3NQkAY<=@^da12
+R2
+R0
+R3
+8fifo_bench.v
+Ffifo_bench.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+vfifo_hier
+R1
+!i10b 1
+!s100 lUb555o>:cnb@cfiYiQMk0
+I]9;4>`0iz;gEkK>WX8NB61
+R2
+R0
+R3
+8fifo_hier.v
+Ffifo_hier.v
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
