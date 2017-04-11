@@ -1,7 +1,0 @@
-4rth 8-10 in write,
-jump logic,
-halt laogic goes to pc,
-nope means do only incrementing and nothing else(read write load store)
-siic means make a new EPC register beside PC and using a new control signal do the instructions
-for rti usig another control signal implement the instruction by putting th value of epc back in pc
-
