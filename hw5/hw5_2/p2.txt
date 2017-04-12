@@ -1,1 +1,6 @@
-// Write your answer to Problem 2 (b) and (c) here
+
+2(b) In the branch prediction, if we use the optimized version, we get to know whether the branch should be taken or not in the decode stage of the branch instruction. So we do not pass the branch instruction to execute stage, Therefore, we need to flush only two instructions, the one in the current PC and other in fetch stage. Since we only flush the instructions when branch is taken, we save the cost when branch is not taken.
+In instruction 2 since we will get to know that branch will be taken, then even though 3 and 4 get into pipeline, we flush them and reload instruction 4 in the pipeline. Now when inst 4 is executed, we get tknow that branch will not be taken so no instructions are flushed and execution continues.
+
+
+2(c) No, the branch prediction can take more than one cycle, if it wants any register value that is overwritten in the precious cycle. In this case it will require an extra cycle. But if the previous instruction was a load instruction from the memory, then it will have to stall for two cycles even with branch prediction
