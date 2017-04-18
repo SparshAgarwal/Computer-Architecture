@@ -40,7 +40,7 @@ module mem_system(/*AUTOARG*/
    wire cacheErr, memErr;
    reg controlErr;
    assign err = controlErr;
-   assign CacheHit = hit;
+   assign CacheHit = hit & comp;
 
    /* data_mem = 1, inst_mem = 0 *
     * needed for cache parameter */
@@ -82,12 +82,11 @@ module mem_system(/*AUTOARG*/
    
    assign miss = enable  & (~hit | ~valid); 
    
+   //TODO: if inputs do not match is it an error or same state? 
    always@(*)begin case(currState)
 	
 		//IDLE
 		5'h00: begin 
-			enable = (~Wr & ~Rd) ? 0 : 1;
-			$display(" *********************************in idle");
 			enable = 1;
 			comp = 1;
 			cache_write = Wr ? 1 : 0; 
@@ -102,24 +101,12 @@ module mem_system(/*AUTOARG*/
 			mem_rd = 0;
 			DataOut = Rd ? (( hit & valid ) ? cache_data_out : 0) : 0;
 			Done = (hit & valid) ? 1 : 0;
-			Stall = (~Wr & ~Rd) ? 0 : ((hit & valid) ? 0 : 1);
-			nextState = (miss & ~dirty) ? 5'h01 : ((miss & valid & dirty) ? 5'h07 : ((hit & valid) ? 5'h00 : 5'h00));
-			$display(" en = %d", enable);
-			$display(" valid = %d", valid);
-			$display(" Done = %d", Done);
-			$display(" miss = %d", miss);
-			$display(" dirty = %d", dirty);
-			$display(" hit = %d", hit);
-			$display(" next state: %d",nextState);
-			$display(" Write: %d",Wr);
-			$display(" Read: %d",Rd);
-			$display(" Stall: %d",Stall);
-			$display(" Mem Stall: %d",mem_stall);
+			Stall = (~Wr & ~Rd) ? 0 :(( hit & valid) ? 0 : 1);
+			nextState = (miss & ~dirty) ? 5'h03 : ((miss & valid & dirty) ? 5'h0D : ((hit & valid) ? 5'h00 : 5'h00));
 		end
 		
 		//MEMORY READ 1 
-		5'h01: begin 
-			$display(" in memory read 1 ");
+		5'h03: begin 
 			enable = 0;
 			comp = 0;
 			cache_write = 0; 
@@ -135,13 +122,11 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = 5'h02; 
-			$display("next state: %d",nextState);
+			nextState = 5'h06; 
 		end
 		
 		//MEMORY READ 2
-		5'h02: begin 
-			$display(" in memory read 2");
+		5'h06: begin 
 			enable = 0;
 			comp = 0;
 			cache_write = 0; 
@@ -157,112 +142,92 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h02 : 5'h03;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h06 : 5'h08;
 		end
 	
 		//MEMORY READ 3 and INSTALL CACHE 1
-		5'h03: begin 
-			$display(" in memory read 3");
+		5'h08: begin 
 			enable = 1;
 			comp = 0;
 			cache_write = 1; 
 			index = Addr[10:3];
 			tag_in = Addr[15:11];
 			offset = 3'b000;
-			cache_data_in = mem_data_out; 
+			cache_data_in = (Wr & (offset == {Addr[2:1], 1'b0})) ? DataIn : mem_data_out; 
 			valid_in = 0;
 			mem_addr = {Addr[15:3], 3'b100};
 			mem_data_in = 0;
 			mem_wr = 0;
 			mem_rd = 1;
-			DataOut = 0; 
+			DataOut = (Rd & (offset == {Addr[2:1], 1'b0})) ? mem_data_out : 0; 
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h03 : 5'h04;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h08 : 5'h0A;
 		end	
 		
 		//MEMORY READ 4 and INSTALL CACHE 2
-		5'h04: begin 
-			$display(" in memory read 4");
+		5'h0A: begin 
 			enable = 1;
 			comp = 0;
 			cache_write = 1; 
 			index = Addr[10:3];
 			tag_in = Addr[15:11];
 			offset = 3'b010;
-			cache_data_in = mem_data_out; 
+			cache_data_in = (Wr & (offset == {Addr[2:1], 1'b0})) ? DataIn : mem_data_out; 
 			valid_in = 0;
 			mem_addr = {Addr[15:3], 3'b110};
 			mem_data_in = 0;
 			mem_wr = 0;
 			mem_rd = 1;
-			DataOut = 0; 
+			DataOut = (Rd & (offset == {Addr[2:1], 1'b0})) ? mem_data_out : 0;
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h04 : 5'h05;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h0A : 5'h0B;
 		end
 
 		//INSTALL CACHE 3 
-		5'h05: begin
-			$display(" in install cache 3");
+		5'h0B: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 1;
 			index = Addr[10:3]; 
 			tag_in = Addr[15:11];
 			offset = 3'b100;
-			cache_data_in = mem_data_out;
+			cache_data_in = (Wr & (offset == {Addr[2:1], 1'b0})) ? DataIn : mem_data_out; 
 			valid_in = 0;
 			mem_addr = 0; 
 			mem_data_in = 0;
 			mem_wr = 0;
 			mem_rd = 0;
-			DataOut = 0;
+			DataOut = (Rd & (offset == {Addr[2:1], 1'b0})) ? mem_data_out : 0;
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h05 : 5'h06; 
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h0B : 5'h0C; 
 		end 
 
 		//INSTALL CACHE 4 
-		5'h06: begin
-			$display(" ***********************in install cache 4");
+		5'h0C: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 1;
 			index = Addr[10:3]; 
 			tag_in = Addr[15:11];
 			offset = 3'b110;
-			cache_data_in = mem_data_out;
+			cache_data_in = (Wr & (offset == {Addr[2:1], 1'b0})) ? DataIn : mem_data_out; 
 			valid_in = 1;
 			mem_addr = 0; 
 			mem_data_in = 0;
 			mem_wr = 0;
 			mem_rd = 0;
-			DataOut = 0;
-			Done = 0;
+			DataOut = (Rd & (offset == {Addr[2:1], 1'b0})) ? mem_data_out : 0;
+			Done = 1;
 			Stall = 1;
 			nextState = 5'h00; 
-			$display("next state: %d",nextState);
-			$display(" valid = %d", valid);
-			$display(" miss = %d", miss);
-			$display(" dirty = %d", dirty);
-			$display(" hit = %d", hit);
-			$display(" next state: %d",nextState);
-			$display(" Write: %d",Wr);
-			$display(" Read: %d",Rd);
-			$display(" Stall: %d",Stall);
-			$display(" Mem Stall: %d",mem_stall);
-			$display(" Valid_in: %d",valid_in);
 		end 
 		
 		
 		//PRE-MEMORY WRITEBACK/ACCESS READ 1 (miss, dirty, valid): read dirty data to writeback to memory in MEMORY WRITEBACK stage
-		5'h07: begin
-			$display(" in prememory writeback/ access read 1 ");
+		5'h0D: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 0; //not writing to cache
@@ -278,13 +243,11 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = 5'h08;
-			$display("next state: %d",nextState);
+			nextState = 5'h0E;
 		end
 		
 		//PRE-MEMORY WRITEBACK/ACCESS READ 2 (and WRITE 1)
-		5'h08: begin
-			$display("in prememory writeback/ access read 2 ");
+		5'h0E: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 0; //not writing to cache
@@ -300,13 +263,11 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h08 : 5'h09;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h0E : 5'h0F;
 		end
 
 		//PRE-MEMORY WRITEBACK/ACCESS READ 3 (and WRITE 1 and 2)
-		5'h09: begin
-			$display("in prememory writeback/ access read 3 ");
+		5'h0F: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 0; //not writing to cache
@@ -322,13 +283,11 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h09 : 5'h0A;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h0F : 5'h10;
 		end	
 
 		//PRE-MEMORY WRITEBACK/ACCESS READ 4 (and WRITE 1, 2, 3)
-		5'h0A: begin
-			$display("in prememory writeback/ access read 4 ");
+		5'h10: begin
 			enable = 1;
 			comp = 0;
 			cache_write = 0; //not writing to cache
@@ -344,13 +303,11 @@ module mem_system(/*AUTOARG*/
 			DataOut = 0; //DataOut not set yet
 			Done = 0;
 			Stall = 1;
-			nextState = mem_stall ? 5'h0A : 5'h01;
-			$display("next state: %d",nextState);
+			nextState = mem_stall ? 5'h10 : 5'h03;
 		end
 		
 		//ERROR
-		5'h0B: begin
-			$display("in error");
+		5'h15: begin
 			Done = 1;
 			Stall = 0;
 			if(Done && 1) begin
@@ -363,33 +320,21 @@ module mem_system(/*AUTOARG*/
 		
 		default: begin
 			enable = 1;
-			$display(" in default");
-			enable = 1;
 			comp = 1;
 			cache_write = Wr ? 1 : 0; 
 			index = (~Wr & ~Rd) ? 0 : Addr[10:3]; //[1:0] is to select word in a cache line
 			tag_in = (~Wr & ~Rd) ? 0 : Addr[15:11];
 			offset = (~Wr & ~Rd) ? 0 : {Addr[2:1], 1'b0};
 			cache_data_in = Wr ? DataIn : 0; 
-			valid_in = Wr ? 1 : 0;
+			valid_in = 0;
 			mem_addr = 0; //not using memory yet
 			mem_data_in = 0;
 			mem_wr = 0;
 			mem_rd = 0;
 			DataOut = Rd ? (( hit & valid ) ? cache_data_out : 0) : 0;
 			Done = (hit & valid) ? 1 : 0;
-			Stall = (~Wr & ~Rd) ? 0 : ((hit & valid) ? 0 : 1);
-			nextState = (miss & ~dirty) ? 5'h01 : ((miss & valid & dirty) ? 5'h07 : ((hit & valid) ? 5'h00 : 5'h00));
-			$display(" valid = %d", valid);
-			$display(" Done = %d", Done);
-			$display(" miss = %d", miss);
-			$display(" dirty = %d", dirty);
-			$display(" hit = %d", hit);
-			$display(" next state: %d",nextState);
-			$display(" Write: %d",Wr);
-			$display(" Read: %d",Rd);
-			$display(" Stall: %d",Stall);
-			$display(" Mem Stall: %d",mem_stall);
+			Stall = (~Wr & ~Rd) ? 0 :(( hit & valid) ? 0 : 1);
+			nextState = (miss & ~dirty) ? 5'h03 : ((miss & valid & dirty) ? 5'h0D : ((hit & valid) ? 5'h00 : 5'h00));
 		end
 	
 	endcase
