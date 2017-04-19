@@ -28,7 +28,7 @@ module mem_system(/*AUTOARG*/
    dff curr_State[3:0] (.q(currState), .d(nextState), .clk(clk), .rst(rst));
    
    wire dirty, valid, hit, miss, mem_stall, cacheErr, memErr, cacheHit, cacheHitTemp;
-   reg comp, cache_write, mem_wr, mem_rd, enable, valid_in, controlEr, retry;
+   reg comp, cache_write, mem_wr, mem_rd, enable, valid_in, controlErr, retry;
    wire[15:0] cache_data_out, mem_data_out;
    wire[4:0] tag_out;
    wire[3:0] busy;
