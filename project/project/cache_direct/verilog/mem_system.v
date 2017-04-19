@@ -41,7 +41,12 @@ module mem_system(/*AUTOARG*/
    reg controlErr;
    assign err = controlErr;
    reg retry;
-   assign CacheHit = hit & comp & ~retry;
+
+   wire cHit1, cHit2;
+   //assign CacheHit = hit & comp & ~retry;
+   assign cHit1 = hit & comp & ~retry;
+   assign CacheHit = cHit2;
+   dff hitdff(.clk(clk), .rst(rst), .q(cHit2), .d(cHit1));
 
    /* data_mem = 1, inst_mem = 0 *
     * needed for cache parameter */
@@ -101,8 +106,8 @@ module mem_system(/*AUTOARG*/
 			mem_wr = 0;
 			mem_rd = 0;
 			DataOut = Rd ? cache_data_out  : 0;
-			Done = (Wr | Rd) ? 1 : 0;
-			Stall = 0;
+			Done = 0;
+			Stall = 1;
 			nextState = 5'h00;
    		end
 	
@@ -110,7 +115,7 @@ module mem_system(/*AUTOARG*/
 		5'h00: begin 
 			retry = 0;
 			enable = 1;
-			comp = 1;
+			comp = (~Wr & ~Rd) ? 0 : 1;
 			cache_write = Wr ? 1 : 0; 
 			index = (~Wr & ~Rd) ? 0 : Addr[10:3]; 
 			tag_in = (~Wr & ~Rd) ? 0 : Addr[15:11];
