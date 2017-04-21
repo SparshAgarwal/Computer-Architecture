@@ -164,11 +164,10 @@ module proc (/*AUTOARG*/
 	//*******************EXECUTE STAGE*******************//
 
 	//HAZARD DETECTION: IFID latch not updated, instructions in IF and ID stay
-	//EX/MEM.WriteRegister = IF/ID.ReadRegister1,2 //TODO AND regwrite enabled?
+	//EX/MEM.WriteRegister = IF/ID.ReadRegister1,2
 	//MEM/WB.WriteRegister = IF/ID.ReadRegister1,2
 	//ID/EX.WriteRegister = IF/ID.ReadRegister1,2
 	//TODO memory forwarding
-	//TODO register bypass
 	
 	assign temp1 = ((instrOut_IDEX[10:8] == writeregsel_EXMEM) & regWrEn_EXMEM & readEn1_IFID ) ? 1 : 0; // For A
 	assign temp2 = ((instrOut_IDEX[10:8] == writeregsel_MEMWB) & regWrEn_MEMWB & readEn1_IFID ) ? 1 : 0; // For A
@@ -258,4 +257,5 @@ endmodule // proc
 // DUMMY LINE FOR REV CONTROL :0:
 
 
-// for set-ass use for both pc and memory, two diff stalls how to use and whether to use mem_stall or busy
+//ToDO  for set-ass use for both pc and memory, two diff stalls how to use and whether to use mem_stall or busy
+// TODO for store and load there can be multiple forwarding required
