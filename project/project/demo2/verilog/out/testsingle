@@ -1,7 +1,7 @@
-Program 0 /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/j_2.asm
+Program 0 /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm
 -------------------------------------------------
 Step: 1
-Compiling /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/j_2.asm
+Compiling /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm
 Created the following files
 loadfile_0.img
 loadfile_1.img
@@ -17,11 +17,9 @@ Top module: proc_hier_pbench
 Compilation log in wsrun.log
 Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
 Executing vlib __work
-** Error: (vlib-35) Failed to create directory "__work".
-File exists. (errno = EEXIST)
 Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v
 QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
-Start time: 19:30:54 on Apr 20,2017
+Start time: 17:18:05 on Apr 21,2017
 vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
 -- Compiling module PFA
 -- Compiling module additionLogic
@@ -46,7 +44,7 @@ vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkr
 
 Top level modules:
 	proc_hier_pbench
-End time: 19:30:54 on Apr 20,2017, Elapsed time: 0:00:00
+End time: 17:18:05 on Apr 21,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -56,7 +54,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 19:30:55 on Apr 20,2017
+# Start time: 17:18:06 on Apr 21,2017
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -99,9 +97,17 @@ Reading pref.tcl
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
-#    Time: 1305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 19:30:56 on Apr 20,2017, Elapsed time: 0:00:01
+#    Time: 3305 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 17:18:07 on Apr 21,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 4
@@ -116,8 +122,8 @@ Running arch simulator wiscalculator...
 -------------------------------------------------
 Step: 6
 Comparing arch simulation trace against verilog simulation trace
-SUCCESS. Simulations match for /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/j_2.asm.
+SUCCESS. Simulations match for /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm.
 -------------------------------------------------
 Final log, saved in summary.log
-/u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/j_2.asm SUCCESS CPI:7.0 CYCLES:14 ICOUNT:2 IHITRATE: 0 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm SUCCESS CPI:3.4 CYCLES:34 ICOUNT:10 IHITRATE: 100.0 DHITRATE: 100.0
 Reading pref.tcl

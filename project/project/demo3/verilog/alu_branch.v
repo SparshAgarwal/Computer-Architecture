@@ -28,6 +28,9 @@ sixteenBitCLA CLA(.InA(sA), .InB(sB), .Out(w5), .C0(Cin), .C12(c12), .C16(cout),
 
 always @ (*) begin
 	casex(Op)
+		5'b1????:begin
+			branchCon = 0;
+		end
 		5'b01010:begin
 			value = (sA==sB)?1:0;
 			branchCon = value==1?1:0;
