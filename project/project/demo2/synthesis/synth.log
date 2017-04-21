@@ -1,0 +1,740 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version L-2016.03-SP4-1 for linux64 - Sep 10, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list additionLogic.v alu.v alu_op.v dff.v extendImm.v fourBitCLA.v memory2c.syn.v op_control.v pc_control.v PFA.v proc.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v readEnOp_Control.v  ]
+additionLogic.v alu.v alu_op.v dff.v extendImm.v fourBitCLA.v memory2c.syn.v op_control.v pc_control.v PFA.v proc.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v readEnOp_Control.v
+set my_toplevel proc
+proc
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./additionLogic.v
+Compiling source file ./alu.v
+Warning:  ./alu.v:22: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ./alu_op.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./extendImm.v
+Compiling source file ./fourBitCLA.v
+Compiling source file ./memory2c.syn.v
+Compiling source file ./op_control.v
+Warning:  ./memory2c.syn.v:71: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./pc_control.v
+Compiling source file ./PFA.v
+Compiling source file ./proc.v
+Warning:  ./proc.v:116: the undeclared symbol 'regFileErr' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:140: the undeclared symbol 'readEn_IDEX' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:140: the undeclared symbol 'readEn' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:154: the undeclared symbol 'aluOfl' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:154: the undeclared symbol 'aluZero' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:180: the undeclared symbol 'readEn_EXMEM' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./proc.v:206: the undeclared symbol 'readEn_MEMWB' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./reg16bit.v
+Compiling source file ./rf.v
+Compiling source file ./shifter.v
+Compiling source file ./simpleAlu.v
+Compiling source file ./sixteenBitCLA.v
+Compiling source file ./readEnOp_Control.v
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2016_09_23/@sys/L-2016.03-SP4-1/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2016_09_23/@sys/L-2016.03-SP4-1/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./proc.v:76: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./proc.v:77: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./proc.v:95: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 95 in file
+	'./proc.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            95            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'proc'.
+Information: Building the design 'memory2c'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memory2c line 71 in file
+		'./memory2c.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   memory2c/60    |   64   |    8    |      6       |
+|   memory2c/60    |   64   |    8    |      6       |
+======================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'pc_control'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'readEnOp_Control'. (HDL-193)
+
+Statistics for case statements in always block at line 6 in file
+	'./readEnOp_Control.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            8             |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine readEnOp_Control line 6 in file
+		'./readEnOp_Control.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     branch_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      jump_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     readEn1_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     readEn2_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'op_control'. (HDL-193)
+Warning:  ./op_control.v:16: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 11 in file
+	'./op_control.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine op_control line 11 in file
+		'./op_control.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     jriSel_reg      | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+|      r7Sel_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       err_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      halt_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    regDesSel_reg    | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+|      jump_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     branch_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     memRdEn_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    regWrSel_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     memWrEn_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    aluSrcSel_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     regWrEn_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   extendSign_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    data1Sel_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rf'. (HDL-193)
+Warning:  ./rf.v:47: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./rf.v:79: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 45 in file
+	'./rf.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 77 in file
+	'./rf.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'extendImm'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'simpleAlu'. (HDL-193)
+Warning:  ./simpleAlu.v:12: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'alu_op'. (HDL-193)
+Warning:  ./alu_op.v:107: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu_op.v:115: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu_op.v:116: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu_op.v:117: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 8 in file
+	'./alu_op.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            10            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine alu_op line 8 in file
+		'./alu_op.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      invA_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      invB_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      sign_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       err_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       Cin_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       Op_reg        | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ./alu.v:71: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:72: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:76: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:87: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:88: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:92: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 39 in file
+	'./alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine alu line 39 in file
+		'./alu.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      value_reg      | Latch |  16   |  Y  | N  | N  | N  | -  | -  | -  |
+|       ofl_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       err_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       cnt_reg       | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|    branchCon_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    shiftType_reg    | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'reg16bit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'additionLogic'. (HDL-193)
+Warning:  ./additionLogic.v:22: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./additionLogic.v:23: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./additionLogic.v:24: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./additionLogic.v:26: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'sixteenBitCLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'shifter'. (HDL-193)
+Warning:  ./shifter.v:10: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 9 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            10            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'fourBitCLA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PFA'. (HDL-193)
+Presto compilation completed successfully.
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design proc
+Current design is 'proc'.
+{proc}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: L-2016.03-SP4-1
+Date   : Mon Apr 10 18:38:35 2017
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+proc
+    GTECH_AND2                                 gtech
+    GTECH_BUF                                  gtech
+    GTECH_NOT                                  gtech
+    GTECH_OR2                                  gtech
+    GTECH_XOR2                                 gtech
+    alu
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+        GTECH_XOR2                             gtech
+        shifter
+            GTECH_AND2                         gtech
+            GTECH_BUF                          gtech
+            GTECH_NOT                          gtech
+            GTECH_OR2                          gtech
+        sixteenBitCLA
+            GTECH_AND2                         gtech
+            GTECH_OR2                          gtech
+            fourBitCLA
+                GTECH_AND2                     gtech
+                GTECH_OR2                      gtech
+                PFA
+                    GTECH_AND2                 gtech
+                    GTECH_XOR2                 gtech
+    alu_op
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+    dff
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+    extendImm
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+    memory2c
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+    op_control
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+    pc_control
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        simpleAlu
+            GTECH_BUF                          gtech
+            GTECH_NOT                          gtech
+            GTECH_OR2                          gtech
+            additionLogic
+                GTECH_AND2                     gtech
+                GTECH_BUF                      gtech
+                GTECH_NOT                      gtech
+                GTECH_OR2                      gtech
+                GTECH_XOR2                     gtech
+                sixteenBitCLA
+                    ...
+    readEnOp_Control
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+    rf
+        GTECH_AND2                             gtech
+        GTECH_BUF                              gtech
+        GTECH_NOT                              gtech
+        GTECH_OR2                              gtech
+        reg16bit
+            dff
+                ...
+    simpleAlu
+        ...
+1
+link
+
+  Linking design 'proc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Information: Uniquified 2 instances of design 'memory2c'. (OPT-1056)
+Information: Uniquified 466 instances of design 'dff'. (OPT-1056)
+Information: Uniquified 2 instances of design 'simpleAlu'. (OPT-1056)
+Information: Uniquified 8 instances of design 'reg16bit'. (OPT-1056)
+Information: Uniquified 2 instances of design 'additionLogic'. (OPT-1056)
+Information: Uniquified 3 instances of design 'sixteenBitCLA'. (OPT-1056)
+Information: Uniquified 12 instances of design 'fourBitCLA'. (OPT-1056)
+Information: Uniquified 48 instances of design 'PFA'. (OPT-1056)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile 
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'proc'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | L-2016.03-DWBB_201603.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 108 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'dff_143'
+  Processing 'memory2c_0'
+  Processing 'shifter'
+  Processing 'PFA_32'
+  Processing 'fourBitCLA_8'
+  Processing 'sixteenBitCLA_2'
+  Processing 'alu'
+Information: The register 'err_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'alu_op'
+Information: The register 'err_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'additionLogic_1'
+  Processing 'simpleAlu_1'
+  Processing 'extendImm'
+  Processing 'reg16bit_0'
+  Processing 'reg16bit_7'
+  Processing 'rf'
+  Processing 'op_control'
+Information: The register 'err_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'readEnOp_Control'
+  Processing 'pc_control'
+  Processing 'proc'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'memory2c_0_DW01_inc_0'
+  Processing 'alu_DW01_cmp6_0'
+  Processing 'alu_DW01_cmp6_1'
+  Processing 'memory2c_1_DW01_inc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06   36919.8      0.25      43.8      25.9                          
+    0:00:06   36919.8      0.25      43.8      25.9                          
+    0:00:07   39196.9      0.00       0.0      19.7                          
+    0:00:08   39196.9      0.00       0.0      19.7                          
+    0:00:08   39196.9      0.00       0.0      19.7                          
+    0:00:08   39196.9      0.00       0.0      19.7                          
+    0:00:08   39196.9      0.00       0.0      19.7                          
+    0:00:09   37439.8      0.50     168.8      18.7                          
+    0:00:09   37470.3      0.00       0.0      18.7                          
+    0:00:10   37440.8      0.00       0.0      18.7                          
+    0:00:10   37440.8      0.00       0.0      18.7                          
+    0:00:10   37440.8      0.00       0.0      18.7                          
+    0:00:10   37440.8      0.00       0.0      18.7                          
+    0:00:10   37440.8      0.00       0.0      18.7                          
+    0:00:13   37817.1      0.00       0.0      15.9                          
+    0:00:17   38075.7      0.00       0.0      13.4                          
+    0:00:22   38138.6      0.02       0.0      13.6                          
+    0:00:27   38185.1      0.02       0.0      13.9                          
+    0:00:29   38233.9      0.02       0.0      13.8                          
+    0:00:29   38270.5      0.02       0.0      13.7                          
+    0:00:29   38308.0      0.02       0.0      13.6                          
+    0:00:30   38342.3      0.02       0.0      13.6                          
+    0:00:30   38374.7      0.02       0.0      13.5                          
+    0:00:30   38374.7      0.02       0.0      13.5                          
+    0:00:30   38375.6      0.02       0.0      13.5 instrMem/C2242/net13294  
+    0:00:32   38376.1      0.02       0.0      13.5 instrMem/C2243/net11703  
+    0:00:34   38391.1      0.02       0.0      13.5                          
+    0:00:34   38393.4      0.00       0.0      13.3                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:34   38393.4      0.00       0.0      13.3                          
+    0:00:34   38393.4      0.00       0.0      13.3                          
+    0:00:34   38393.4      0.00       0.0      13.3                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:34   38393.4      0.00       0.0      13.3                          
+    0:00:34   38401.4      0.00       0.0      13.1 opCtrl/n28               
+    0:00:34   38526.7      0.00       0.0      13.0 pcCtrl/plus2/addlogic/Out<14>
+    0:00:35   38631.4      0.00       0.0      12.9 pcALU/addlogic/Out<6>    
+    0:00:35   38731.8      0.00       0.0      12.8 mainALU/shift/n310       
+    0:00:35   38881.0      0.00       0.0      12.7 dataMem/n1172            
+    0:00:35   39000.7      0.00       0.0      12.6 mainALU/shift/n99        
+    0:00:35   39072.0      0.00       0.0      12.6 mainALU/shift/n112       
+    0:00:35   39223.6      0.00       0.0      12.6 instrMem/C2243/net11808  
+    0:00:35   39388.3      0.00       0.0      12.4 dataMem/C2243/net11980   
+    0:00:35   39553.1      0.00       0.0      12.3 dataMem/C2242/net13362   
+    0:00:35   39774.6      0.00       0.0      12.2 mainALU/n108             
+    0:00:35   39824.8      0.00       0.0      12.2 mainALU/n179             
+    0:00:35   39989.5      0.00       0.0      12.1 dataMem/C2243/net11954   
+    0:00:35   40154.2      0.00       0.0      12.0 dataMem/C2242/net13340   
+    0:00:36   40233.6      0.00       0.0      11.9 mainALU/shift/n174       
+    0:00:36   40238.3      0.00       0.0      11.9 mainALU/shift/n217       
+    0:00:36   40245.3      0.00       0.0      11.9 mainALU/shift/n192       
+    0:00:36   40267.8      0.00       0.0      11.9 pcALU/n1                 
+    0:00:39   40285.6      0.00       0.0      11.9 mainALU/shift/n104       
+    0:00:39   40365.9      0.00       0.0      11.9 regFile/n277             
+    0:00:39   40448.0      0.00       0.0      11.8 mainALU/n89              
+    0:00:39   40480.9      0.00       0.0      11.8 pcALU/addlogic/n22       
+    0:00:40   40579.9      0.00       0.0      11.8 pcALU/addlogic/cla/cla4/net29631
+    0:00:41   40581.3      0.00       0.0      11.8 readEnOps/net28205       
+    0:00:41   40625.4      0.00       0.0      11.7 pcCtrl/plus2/addlogic/net29353
+    0:00:41   40685.0      0.00       0.0      11.7 aluCtrl/n48              
+    0:00:41   40689.2      0.00       0.0      11.7 mainALU/eq_80/net20527   
+    0:00:41   40688.3      0.00       0.0      11.7 pcCtrl/plus2/addlogic/n54
+    0:00:41   40751.2      0.00       0.0      11.7 aluCtrl/N131             
+    0:00:41   40758.7      0.00       0.0      11.6 net22721                 
+    0:00:41   40856.3      0.00       0.0      11.6 data                     
+    0:00:41   40859.6      0.00       0.0      11.4 instrMem/C2242/net12960  
+    0:00:41   40862.4      0.00       0.0      11.2 dataMem/C2242/net12958   
+    0:00:42   40900.9      0.00       0.0      10.0 aluCtrl/n29              
+    0:00:42   40898.1      0.00       0.0      10.0 aluCtrl/n37              
+    0:00:42   40895.3      0.00       0.0      10.0 pcCtrl/plus2/addlogic/cla/cla4/net22567
+    0:00:42   41008.8      0.00       0.0      10.0 mainALU/shift/n188       
+    0:00:42   41148.2      0.00       0.0       9.9 dataMem/C2243/net12104   
+    0:00:42   41287.6      0.00       0.0       9.9 instrMem/C2243/net12149  
+    0:00:42   41427.0      0.00       0.0       9.9 dataMem/C2242/net12995   
+    0:00:42   41550.9      0.00       0.0       9.9 mainALU/shift/n171       
+    0:00:42   41566.4      0.00       0.0       9.9 mainALU/n55              
+    0:00:42   41643.8      0.00       0.0       9.8 instrMem/C2243/net11704  
+    0:00:42   41778.0      0.00       0.0       9.8 instrMem/C2243/net12146  
+    0:00:43   41907.1      0.00       0.0       9.8 instrMem/n110            
+    0:00:43   42046.5      0.00       0.0       9.8 instrMem/n186            
+    0:00:43   42185.8      0.00       0.0       9.8 instrMem/n255            
+    0:00:43   42325.2      0.00       0.0       9.8 instrMem/n324            
+    0:00:43   42464.6      0.00       0.0       9.7 instrMem/n393            
+    0:00:43   42604.0      0.00       0.0       9.7 instrMem/n460            
+    0:00:43   42743.4      0.00       0.0       9.7 instrMem/n530            
+    0:00:43   42882.8      0.00       0.0       9.7 instrMem/n598            
+    0:00:43   43022.1      0.00       0.0       9.7 instrMem/n664            
+    0:00:43   43161.5      0.00       0.0       9.7 instrMem/n734            
+    0:00:43   43300.9      0.00       0.0       9.6 instrMem/n802            
+    0:00:43   43440.3      0.00       0.0       9.6 instrMem/n869            
+    0:00:43   43579.7      0.00       0.0       9.6 instrMem/n940            
+    0:00:43   43719.0      0.00       0.0       9.6 instrMem/n1006           
+    0:00:43   43858.4      0.00       0.0       9.6 instrMem/n1078           
+    0:00:44   43997.8      0.00       0.0       9.6 instrMem/n1144           
+    0:00:44   44137.2      0.00       0.0       9.6 instrMem/n1210           
+    0:00:44   44276.6      0.00       0.0       9.5 instrMem/n1282           
+    0:00:44   44416.0      0.00       0.0       9.5 instrMem/n1347           
+    0:00:46   44472.7      0.00       0.0       9.5 pcALU/addlogic/cla/cla2/net22517
+    0:00:46   44529.5      0.00       0.0       9.5 mainALU/n82              
+    0:00:46   44674.1      0.00       0.0       9.5 mainALU/shift/n269       
+    0:00:46   44705.0      0.00       0.0       9.5 opCtrl/n26               
+    0:00:46   44736.0      0.00       0.0       9.5 mainALU/n182             
+    0:00:47   44746.3      0.00       0.0       9.5 mainALU/shift/Out<7>     
+    0:00:47   44792.8      0.00       0.0       9.5 mainALU/n129             
+    0:00:47   44851.0      0.00       0.0       9.5 aluCtrl/n33              
+    0:00:47   44853.8      0.00       0.0       9.5 dataMem/net21101         
+    0:00:47   44938.3      0.00       0.0       9.5 regFile/read2data<4>     
+    0:00:47   45098.3      0.00       0.0       9.4 regFile/read1data<9>     
+    0:00:47   45272.9      0.00       0.0       9.4 regFile/read1data<12>    
+    0:00:49   45322.2      0.00       0.0       9.3 n64                      
+    0:00:49   45348.0      0.00       0.0       9.3 writeregsel<2>           
+    0:00:49   45382.2      0.00       0.0       9.2 opCtrl/aluOp<1>          
+    0:00:49   45394.4      0.00       0.0       9.2 pcALU/addlogic/cla/cla4/net22488
+    0:00:53   45393.5      0.00       0.0       9.2 readEnOps/net20833       
+    0:00:55   45395.4      0.00       0.0       9.2 net22741                 
+    0:00:56   45399.1      0.03       0.0       9.2 pcCtrl/plus2/addlogic/cla/cla4/n2
+    0:00:57   45406.2      0.05       0.2       9.2 pcALU/addlogic/cla/cla1/net22527
+    0:00:58   45429.6      0.20       0.9       9.2 pcCtrl/plus2/addlogic/cla/cla2/net22598
+    0:00:59   45431.5      0.21       1.1       9.2 pcALU/addlogic/cla/cla4/net22484
+    0:01:00   45471.4      0.21       1.1       9.1 extend/n11               
+    0:01:00   45478.0      0.23       1.2       9.1 pcALU/addlogic/cla/cla1/net29231
+    0:01:00   45482.7      0.28       1.6       9.1 pcCtrl/plus2/addlogic/cla/cla3/c4
+    0:01:02   45485.0      0.30       1.8       9.1 net22730                 
+    0:01:02   45493.9      0.34       2.2       9.1 n58                      
+    0:01:02   45513.2      0.34       2.3       9.1 instrMem/n115            
+    0:01:02   45524.0      0.26       1.8       9.1 pc[15]/state_reg/D       
+    0:01:02   45517.9      0.25       1.7       9.1 pc[15]/state_reg/D       
+    0:01:02   45532.4      0.23       1.5       9.1 pc[15]/state_reg/D       
+    0:01:02   45549.8      0.20       0.9       9.1 pc[15]/state_reg/D       
+    0:01:02   45551.7      0.16       0.7       9.1 pc[15]/state_reg/D       
+    0:01:02   45558.7      0.15       0.7       9.1 pc[15]/state_reg/D       
+    0:01:02   45558.2      0.14       0.6       9.1 pc[15]/state_reg/D       
+    0:01:02   45569.0      0.12       0.5       9.1 pc[15]/state_reg/D       
+    0:01:02   45569.5      0.12       0.5       9.1 pc[15]/state_reg/D       
+    0:01:02   45565.3      0.10       0.4       9.1 pc[15]/state_reg/D       
+    0:01:03   45570.9      0.07       0.3       9.1 pc[15]/state_reg/D       
+    0:01:03   45569.0      0.07       0.2       9.1 pc[14]/state_reg/D       
+    0:01:03   45570.9      0.06       0.2       9.1 pc[15]/state_reg/D       
+    0:01:03   45570.0      0.05       0.2       9.1 pc[15]/state_reg/D       
+    0:01:05   45572.3      0.05       0.2       9.1 extend/n13               
+    0:01:06   45570.9      0.05       0.2       9.1 instrMem/n115            
+    0:01:08   45573.3      0.05       0.2       9.1 net22744                 
+    0:01:08   45574.7      0.05       0.2       9.1 pc[15]/state_reg/D       
+    0:01:08   45579.4      0.05       0.2       9.1 pc[15]/state_reg/D       
+    0:01:08   45579.4      0.04       0.2       9.1 pc[15]/state_reg/D       
+    0:01:08   45582.6      0.04       0.2       9.1                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:08   45582.6      0.04       0.2       9.1                          
+    0:01:09   45582.6      0.04       0.2       9.1                          
+    0:01:09   42644.8      0.04       0.1       9.1                          
+    0:01:10   41674.8      0.04       0.1       9.1                          
+    0:01:10   41117.7      0.05       0.1       9.1                          
+    0:01:10   41023.4      0.05       0.1       9.1                          
+    0:01:10   40965.7      0.05       0.1       9.1                          
+    0:01:10   40915.0      0.05       0.1       9.1                          
+    0:01:11   40858.7      0.05       0.1       9.1                          
+    0:01:11   40858.7      0.05       0.1       9.1                          
+    0:01:11   40858.7      0.05       0.1       9.1                          
+    0:01:11   40733.4      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40730.1      0.05       0.1       9.1                          
+    0:01:11   40727.7      0.05       0.1       9.1                          
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'proc' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'regFile/reg2/outp[0]/clk': 1490 load(s), 1 driver(s)
+     Net 'pcALU/addlogic/cla/cla1/pfa1/Cin': 1027 load(s), 1 driver(s)
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     L-2016.03-SP4-1
+Date:        Mon Apr 10 18:39:48 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     12
+    Unconnected ports (LINT-28)                                     8
+    Constant outputs (LINT-52)                                      4
+
+Cells                                                              67
+    Cells do not drive (LINT-1)                                    18
+    Connected to power or ground (LINT-32)                         46
+    Nets connected to multiple pins on same cell (LINT-33)          3
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+proc.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/j/o/joanne/private/CS552/demo2/verilog/synth/proc.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+proc.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/proc.ddc'.
+1
+report_hierarchy > synth/hierarchy.txt
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+
+Thank you...

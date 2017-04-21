@@ -12,17 +12,15 @@ loadfile.lst
 Skipping memory2c.syn.v, seems like a file meant for synthesis
 -------------------------------------------------
 Step: 2
-Compiling the following verilog files: PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
+Compiling the following verilog files: PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
 Top module: proc_hier_pbench
 Compilation log in wsrun.log
 Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
 Executing vlib __work
-** Error: (vlib-35) Failed to create directory "__work".
-File exists. (errno = EEXIST)
-Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v
+Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v
 QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
-Start time: 18:10:26 on Apr 10,2017
-vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
+Start time: 19:18:29 on Apr 20,2017
+vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
 -- Compiling module PFA
 -- Compiling module additionLogic
 -- Compiling module alu
@@ -37,7 +35,7 @@ vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkr
 -- Compiling module proc
 -- Compiling module proc_hier
 -- Compiling module proc_hier_pbench
--- Compiling module readEnOp_control
+-- Compiling module readEnOp_Control
 -- Compiling module reg16bit
 -- Compiling module rf
 -- Compiling module shifter
@@ -46,7 +44,7 @@ vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkr
 
 Top level modules:
 	proc_hier_pbench
-End time: 18:10:26 on Apr 10,2017, Elapsed time: 0:00:00
+End time: 19:18:29 on Apr 20,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -56,7 +54,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:27 on Apr 10,2017
+# Start time: 19:18:30 on Apr 20,2017
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -84,7 +82,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -94,7 +92,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -107,7 +105,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 2305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:30 on Apr 10,2017, Elapsed time: 0:00:03
+# End time: 19:18:31 on Apr 20,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 4
@@ -142,7 +140,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:31 on Apr 10,2017
+# Start time: 19:18:32 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -170,7 +168,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -180,7 +178,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -201,7 +199,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 3705 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:31 on Apr 10,2017, Elapsed time: 0:00:00
+# End time: 19:18:32 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -236,7 +234,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:32 on Apr 10,2017
+# Start time: 19:18:33 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -264,7 +262,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -274,7 +272,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -287,7 +285,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 2705 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:33 on Apr 10,2017, Elapsed time: 0:00:01
+# End time: 19:18:33 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -322,7 +320,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:34 on Apr 10,2017
+# Start time: 19:18:34 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -350,7 +348,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -360,7 +358,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -373,7 +371,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 2705 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:34 on Apr 10,2017, Elapsed time: 0:00:00
+# End time: 19:18:35 on Apr 20,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -408,7 +406,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:35 on Apr 10,2017
+# Start time: 19:18:36 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -436,7 +434,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -446,7 +444,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -467,7 +465,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 3705 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:35 on Apr 10,2017, Elapsed time: 0:00:00
+# End time: 19:18:36 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -502,7 +500,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:36 on Apr 10,2017
+# Start time: 19:18:37 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -530,7 +528,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -540,7 +538,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -551,7 +549,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 2605 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:37 on Apr 10,2017, Elapsed time: 0:00:01
+# End time: 19:18:37 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -586,7 +584,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:38 on Apr 10,2017
+# Start time: 19:18:38 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -614,7 +612,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -624,7 +622,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -637,7 +635,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 8905 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:38 on Apr 10,2017, Elapsed time: 0:00:00
+# End time: 19:18:38 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -672,7 +670,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 18:10:39 on Apr 10,2017
+# Start time: 19:18:39 on Apr 20,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -700,7 +698,7 @@ Reading pref.tcl
 # Loading work.sixteenBitCLA(fast)
 # Loading work.fourBitCLA(fast)
 # Loading work.PFA(fast)
-# Loading work.readEnOp_control(fast)
+# Loading work.readEnOp_Control(fast)
 # Loading work.dff(fast)
 # Loading work.op_control(fast)
 # Loading work.rf(fast)
@@ -710,7 +708,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3335
+# 3334
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -802,7 +800,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 21905 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 18:10:39 on Apr 10,2017, Elapsed time: 0:00:00
+# End time: 19:18:39 on Apr 20,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3

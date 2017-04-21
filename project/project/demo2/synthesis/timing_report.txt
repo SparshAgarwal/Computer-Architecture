@@ -1,0 +1,1351 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : proc
+Version: L-2016.03-SP4-1
+Date   : Mon Apr 10 18:39:56 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U17/Y (OR2X2)            0.04       0.67 r
+  pcCtrl/plus2/addlogic/cla/cla3/U3/Y (NAND3X1)           0.01       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U2/Y (BUFX2)             0.03       0.71 f
+  pcCtrl/plus2/addlogic/cla/cla3/U18/Y (AND2X2)           0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla3/U19/Y (INVX1)            0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/c4 (fourBitCLA_1)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/c0 (fourBitCLA_0)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/U3/Y (AND2X2)            0.04       0.78 r
+  pcCtrl/plus2/addlogic/cla/cla4/U2/Y (NOR3X1)            0.02       0.80 f
+  pcCtrl/plus2/addlogic/cla/cla4/U4/Y (NOR3X1)            0.03       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla4/U6/Y (OR2X2)             0.05       0.88 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/Cin (PFA_0)         0.00       0.88 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/U2/Y (XNOR2X1)      0.03       0.90 f
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/Out (PFA_0)         0.00       0.90 f
+  pcCtrl/plus2/addlogic/cla/cla4/Out<3> (fourBitCLA_0)
+                                                          0.00       0.90 f
+  pcCtrl/plus2/addlogic/cla/Out<15> (sixteenBitCLA_0)     0.00       0.90 f
+  pcCtrl/plus2/addlogic/U13/Y (AND2X1)                    0.03       0.94 f
+  pcCtrl/plus2/addlogic/U12/Y (INVX1)                     0.00       0.94 r
+  pcCtrl/plus2/addlogic/U2/Y (NAND3X1)                    0.01       0.94 f
+  pcCtrl/plus2/addlogic/U15/Y (INVX1)                     0.00       0.94 r
+  pcCtrl/plus2/addlogic/U16/Y (INVX1)                     0.02       0.96 f
+  pcCtrl/plus2/addlogic/Out<15> (additionLogic_0)         0.00       0.96 f
+  pcCtrl/plus2/Out<15> (simpleAlu_0)                      0.00       0.96 f
+  pcCtrl/U22/Y (INVX1)                                    0.01       0.97 r
+  pcCtrl/U21/Y (OAI21X1)                                  0.01       0.98 f
+  pcCtrl/readAdd<15> (pc_control)                         0.00       0.98 f
+  pc[15]/d (dff_428)                                      0.00       0.98 f
+  pc[15]/U4/Y (INVX1)                                     0.00       0.98 r
+  pc[15]/U3/Y (NOR2X1)                                    0.01       0.99 f
+  pc[15]/state_reg/D (DFFPOSX1)                           0.00       0.99 f
+  data arrival time                                                  0.99
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[15]/state_reg/CLK (DFFPOSX1)                         0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -0.99
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.05
+
+
+  Startpoint: IDEXimm[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EXMEMsimpleALUresult[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXimm[0]/state_reg/CLK (DFFPOSX1)                     0.00 #     0.00 r
+  IDEXimm[0]/state_reg/Q (DFFPOSX1)                       0.12       0.12 f
+  IDEXimm[0]/q (dff_302)                                  0.00       0.12 f
+  pcALU/B<0> (simpleAlu_1)                                0.00       0.12 f
+  pcALU/addlogic/B<0> (additionLogic_1)                   0.00       0.12 f
+  pcALU/addlogic/cla/InB<0> (sixteenBitCLA_1)             0.00       0.12 f
+  pcALU/addlogic/cla/cla1/InB<0> (fourBitCLA_7)           0.00       0.12 f
+  pcALU/addlogic/cla/cla1/pfa1/InB (PFA_31)               0.00       0.12 f
+  pcALU/addlogic/cla/cla1/pfa1/U1/Y (AND2X2)              0.05       0.16 f
+  pcALU/addlogic/cla/cla1/pfa1/G (PFA_31)                 0.00       0.16 f
+  pcALU/addlogic/cla/cla1/U28/Y (INVX1)                   0.00       0.16 r
+  pcALU/addlogic/cla/cla1/U30/Y (OAI21X1)                 0.02       0.18 f
+  pcALU/addlogic/cla/cla1/U4/Y (AND2X2)                   0.04       0.22 f
+  pcALU/addlogic/cla/cla1/U18/Y (INVX1)                   0.00       0.22 r
+  pcALU/addlogic/cla/cla1/U6/Y (AND2X2)                   0.03       0.25 r
+  pcALU/addlogic/cla/cla1/U2/Y (NOR3X1)                   0.02       0.27 f
+  pcALU/addlogic/cla/cla1/U3/Y (OR2X2)                    0.04       0.31 f
+  pcALU/addlogic/cla/cla1/U5/Y (OR2X2)                    0.05       0.36 f
+  pcALU/addlogic/cla/cla1/c4 (fourBitCLA_7)               0.00       0.36 f
+  pcALU/addlogic/cla/cla2/c0 (fourBitCLA_6)               0.00       0.36 f
+  pcALU/addlogic/cla/cla2/U30/Y (OAI21X1)                 0.05       0.41 r
+  pcALU/addlogic/cla/cla2/U1/Y (AND2X2)                   0.03       0.44 r
+  pcALU/addlogic/cla/cla2/U4/Y (INVX1)                    0.02       0.46 f
+  pcALU/addlogic/cla/cla2/U34/Y (NAND3X1)                 0.03       0.49 r
+  pcALU/addlogic/cla/cla2/U3/Y (BUFX2)                    0.04       0.52 r
+  pcALU/addlogic/cla/cla2/U35/Y (NAND3X1)                 0.01       0.53 f
+  pcALU/addlogic/cla/cla2/U14/Y (BUFX2)                   0.04       0.57 f
+  pcALU/addlogic/cla/cla2/c4 (fourBitCLA_6)               0.00       0.57 f
+  pcALU/addlogic/cla/cla3/c0 (fourBitCLA_5)               0.00       0.57 f
+  pcALU/addlogic/cla/cla3/U31/Y (OAI21X1)                 0.05       0.61 r
+  pcALU/addlogic/cla/cla3/U1/Y (AND2X2)                   0.03       0.65 r
+  pcALU/addlogic/cla/cla3/U4/Y (INVX1)                    0.02       0.66 f
+  pcALU/addlogic/cla/cla3/U35/Y (NAND3X1)                 0.03       0.69 r
+  pcALU/addlogic/cla/cla3/U3/Y (BUFX2)                    0.04       0.73 r
+  pcALU/addlogic/cla/cla3/U36/Y (NAND3X1)                 0.01       0.74 f
+  pcALU/addlogic/cla/cla3/U14/Y (INVX1)                   0.00       0.74 r
+  pcALU/addlogic/cla/cla3/U15/Y (INVX1)                   0.02       0.75 f
+  pcALU/addlogic/cla/cla3/c4 (fourBitCLA_5)               0.00       0.75 f
+  pcALU/addlogic/cla/cla4/c0 (fourBitCLA_4)               0.00       0.75 f
+  pcALU/addlogic/cla/cla4/U15/Y (AND2X2)                  0.04       0.79 f
+  pcALU/addlogic/cla/cla4/U4/Y (INVX1)                    0.00       0.79 r
+  pcALU/addlogic/cla/cla4/U6/Y (AND2X2)                   0.03       0.82 r
+  pcALU/addlogic/cla/cla4/U7/Y (INVX1)                    0.02       0.84 f
+  pcALU/addlogic/cla/cla4/U32/Y (NAND3X1)                 0.03       0.87 r
+  pcALU/addlogic/cla/cla4/U5/Y (BUFX2)                    0.04       0.90 r
+  pcALU/addlogic/cla/cla4/U33/Y (NAND3X1)                 0.02       0.92 f
+  pcALU/addlogic/cla/cla4/U9/Y (BUFX2)                    0.04       0.96 f
+  pcALU/addlogic/cla/cla4/pfa4/Cin (PFA_16)               0.00       0.96 f
+  pcALU/addlogic/cla/cla4/pfa4/U3/Y (XOR2X1)              0.03       0.98 f
+  pcALU/addlogic/cla/cla4/pfa4/Out (PFA_16)               0.00       0.98 f
+  pcALU/addlogic/cla/cla4/Out<3> (fourBitCLA_4)           0.00       0.98 f
+  pcALU/addlogic/cla/Out<15> (sixteenBitCLA_1)            0.00       0.98 f
+  pcALU/addlogic/U53/Y (AND2X1)                           0.03       1.02 f
+  pcALU/addlogic/U58/Y (INVX1)                            0.00       1.02 r
+  pcALU/addlogic/U155/Y (NAND3X1)                         0.01       1.02 f
+  pcALU/addlogic/U125/Y (BUFX2)                           0.04       1.06 f
+  pcALU/addlogic/Out<15> (additionLogic_1)                0.00       1.06 f
+  pcALU/Out<15> (simpleAlu_1)                             0.00       1.06 f
+  EXMEMsimpleALUresult[15]/d (dff_229)                    0.00       1.06 f
+  EXMEMsimpleALUresult[15]/U3/Y (INVX1)                   0.00       1.06 r
+  EXMEMsimpleALUresult[15]/U4/Y (NOR2X1)                  0.01       1.07 f
+  EXMEMsimpleALUresult[15]/state_reg/D (DFFPOSX1)         0.00       1.07 f
+  data arrival time                                                  1.07
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EXMEMsimpleALUresult[15]/state_reg/CLK (DFFPOSX1)       0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.07
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[13]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U17/Y (OR2X2)            0.04       0.67 r
+  pcCtrl/plus2/addlogic/cla/cla3/U3/Y (NAND3X1)           0.01       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U2/Y (BUFX2)             0.03       0.71 f
+  pcCtrl/plus2/addlogic/cla/cla3/U18/Y (AND2X2)           0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla3/U19/Y (INVX1)            0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/c4 (fourBitCLA_1)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/c0 (fourBitCLA_0)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/U3/Y (AND2X2)            0.04       0.78 r
+  pcCtrl/plus2/addlogic/cla/cla4/U5/Y (BUFX2)             0.03       0.81 r
+  pcCtrl/plus2/addlogic/cla/cla4/U18/Y (INVX1)            0.01       0.82 f
+  pcCtrl/plus2/addlogic/cla/cla4/U21/Y (AND2X2)           0.04       0.86 f
+  pcCtrl/plus2/addlogic/cla/cla4/U22/Y (INVX1)            0.01       0.87 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa2/Cin (PFA_2)         0.00       0.87 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa2/U3/Y (XOR2X1)       0.03       0.89 f
+  pcCtrl/plus2/addlogic/cla/cla4/pfa2/Out (PFA_2)         0.00       0.89 f
+  pcCtrl/plus2/addlogic/cla/cla4/Out<1> (fourBitCLA_0)
+                                                          0.00       0.89 f
+  pcCtrl/plus2/addlogic/cla/Out<13> (sixteenBitCLA_0)     0.00       0.89 f
+  pcCtrl/plus2/addlogic/U153/Y (AOI22X1)                  0.04       0.93 r
+  pcCtrl/plus2/addlogic/U154/Y (OAI21X1)                  0.03       0.96 f
+  pcCtrl/plus2/addlogic/Out<13> (additionLogic_0)         0.00       0.96 f
+  pcCtrl/plus2/Out<13> (simpleAlu_0)                      0.00       0.96 f
+  pcCtrl/U85/Y (AOI22X1)                                  0.05       1.01 r
+  pcCtrl/U57/Y (AND2X2)                                   0.03       1.04 r
+  pcCtrl/U58/Y (INVX1)                                    0.01       1.05 f
+  pcCtrl/readAdd<13> (pc_control)                         0.00       1.05 f
+  pc[13]/d (dff_426)                                      0.00       1.05 f
+  pc[13]/U3/Y (INVX1)                                     0.00       1.06 r
+  pc[13]/U4/Y (NOR2X1)                                    0.01       1.06 f
+  pc[13]/state_reg/D (DFFPOSX1)                           0.00       1.06 f
+  data arrival time                                                  1.06
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[13]/state_reg/CLK (DFFPOSX1)                         0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[11]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U21/Y (BUFX2)            0.03       0.66 r
+  pcCtrl/plus2/addlogic/cla/cla3/U24/Y (INVX1)            0.02       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U35/Y (OAI21X1)          0.06       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/U29/Y (INVX1)            0.03       0.77 f
+  pcCtrl/plus2/addlogic/cla/cla3/U36/Y (OAI21X1)          0.06       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla3/U34/Y (AOI21X1)          0.03       0.86 f
+  pcCtrl/plus2/addlogic/cla/cla3/U33/Y (INVX1)            0.01       0.87 r
+  pcCtrl/plus2/addlogic/cla/cla3/pfa4/Cin (PFA_4)         0.00       0.87 r
+  pcCtrl/plus2/addlogic/cla/cla3/pfa4/U3/Y (XNOR2X1)      0.03       0.89 f
+  pcCtrl/plus2/addlogic/cla/cla3/pfa4/Out (PFA_4)         0.00       0.89 f
+  pcCtrl/plus2/addlogic/cla/cla3/Out<3> (fourBitCLA_1)
+                                                          0.00       0.89 f
+  pcCtrl/plus2/addlogic/cla/Out<11> (sixteenBitCLA_0)     0.00       0.89 f
+  pcCtrl/plus2/addlogic/U147/Y (AOI22X1)                  0.03       0.92 r
+  pcCtrl/plus2/addlogic/U148/Y (OAI21X1)                  0.02       0.95 f
+  pcCtrl/plus2/addlogic/Out<11> (additionLogic_0)         0.00       0.95 f
+  pcCtrl/plus2/Out<11> (simpleAlu_0)                      0.00       0.95 f
+  pcCtrl/U83/Y (AOI22X1)                                  0.05       0.99 r
+  pcCtrl/U52/Y (AND2X2)                                   0.03       1.03 r
+  pcCtrl/U54/Y (INVX1)                                    0.01       1.04 f
+  pcCtrl/readAdd<11> (pc_control)                         0.00       1.04 f
+  pc[11]/d (dff_424)                                      0.00       1.04 f
+  pc[11]/U3/Y (INVX1)                                     0.00       1.04 r
+  pc[11]/U4/Y (NOR2X1)                                    0.01       1.05 f
+  pc[11]/state_reg/D (DFFPOSX1)                           0.00       1.05 f
+  data arrival time                                                  1.05
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[11]/state_reg/CLK (DFFPOSX1)                         0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[6]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U20/Y (BUFX2)            0.03       0.54 r
+  pcCtrl/plus2/addlogic/cla/cla2/U21/Y (INVX1)            0.02       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U34/Y (OAI21X1)          0.06       0.62 r
+  pcCtrl/plus2/addlogic/cla/cla2/U27/Y (INVX1)            0.03       0.65 f
+  pcCtrl/plus2/addlogic/cla/cla2/U35/Y (OAI21X1)          0.06       0.71 r
+  pcCtrl/plus2/addlogic/cla/cla2/pfa3/Cin (PFA_9)         0.00       0.71 r
+  pcCtrl/plus2/addlogic/cla/cla2/pfa3/U2/Y (XOR2X1)       0.04       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla2/pfa3/Out (PFA_9)         0.00       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla2/Out<2> (fourBitCLA_2)
+                                                          0.00       0.74 f
+  pcCtrl/plus2/addlogic/cla/Out<6> (sixteenBitCLA_0)      0.00       0.74 f
+  pcCtrl/plus2/addlogic/U35/Y (AND2X1)                    0.03       0.78 f
+  pcCtrl/plus2/addlogic/U40/Y (INVX1)                     0.00       0.77 r
+  pcCtrl/plus2/addlogic/U83/Y (AND2X2)                    0.03       0.80 r
+  pcCtrl/plus2/addlogic/U84/Y (INVX1)                     0.03       0.83 f
+  pcCtrl/plus2/addlogic/Out<6> (additionLogic_0)          0.00       0.83 f
+  pcCtrl/plus2/Out<6> (simpleAlu_0)                       0.00       0.83 f
+  pcCtrl/U17/Y (AOI22X1)                                  0.05       0.88 r
+  pcCtrl/U71/Y (AND2X2)                                   0.03       0.91 r
+  pcCtrl/U72/Y (INVX1)                                    0.01       0.93 f
+  pcCtrl/readAdd<6> (pc_control)                          0.00       0.93 f
+  pc[6]/d (dff_419)                                       0.00       0.93 f
+  pc[6]/U3/Y (INVX1)                                      0.00       0.93 r
+  pc[6]/U4/Y (NOR2X1)                                     0.01       0.93 f
+  pc[6]/state_reg/D (DFFPOSX1)                            0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[6]/state_reg/CLK (DFFPOSX1)                          0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[14]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U17/Y (OR2X2)            0.04       0.67 r
+  pcCtrl/plus2/addlogic/cla/cla3/U3/Y (NAND3X1)           0.01       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U2/Y (BUFX2)             0.03       0.71 f
+  pcCtrl/plus2/addlogic/cla/cla3/U18/Y (AND2X2)           0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla3/U19/Y (INVX1)            0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/c4 (fourBitCLA_1)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/c0 (fourBitCLA_0)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/U23/Y (BUFX2)            0.04       0.78 r
+  pcCtrl/plus2/addlogic/cla/cla4/U1/Y (OR2X1)             0.05       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla4/U20/Y (INVX1)            0.02       0.84 f
+  pcCtrl/plus2/addlogic/cla/cla4/U32/Y (OAI21X1)          0.05       0.90 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/Cin (PFA_1)         0.00       0.90 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/U2/Y (XNOR2X1)      0.03       0.93 f
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/Out (PFA_1)         0.00       0.93 f
+  pcCtrl/plus2/addlogic/cla/cla4/Out<2> (fourBitCLA_0)
+                                                          0.00       0.93 f
+  pcCtrl/plus2/addlogic/cla/Out<14> (sixteenBitCLA_0)     0.00       0.93 f
+  pcCtrl/plus2/addlogic/U21/Y (AND2X1)                    0.03       0.96 f
+  pcCtrl/plus2/addlogic/U18/Y (OR2X1)                     0.05       1.01 f
+  pcCtrl/plus2/addlogic/Out<14> (additionLogic_0)         0.00       1.01 f
+  pcCtrl/plus2/Out<14> (simpleAlu_0)                      0.00       1.01 f
+  pcCtrl/U77/Y (INVX1)                                    0.01       1.02 r
+  pcCtrl/U87/Y (OAI21X1)                                  0.01       1.03 f
+  pcCtrl/readAdd<14> (pc_control)                         0.00       1.03 f
+  pc[14]/d (dff_427)                                      0.00       1.03 f
+  pc[14]/U3/Y (INVX1)                                     0.00       1.03 r
+  pc[14]/U4/Y (NOR2X1)                                    0.01       1.03 f
+  pc[14]/state_reg/D (DFFPOSX1)                           0.00       1.03 f
+  data arrival time                                                  1.03
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[14]/state_reg/CLK (DFFPOSX1)                         0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[10]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U21/Y (BUFX2)            0.03       0.66 r
+  pcCtrl/plus2/addlogic/cla/cla3/U24/Y (INVX1)            0.02       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U35/Y (OAI21X1)          0.06       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/U29/Y (INVX1)            0.03       0.77 f
+  pcCtrl/plus2/addlogic/cla/cla3/U36/Y (OAI21X1)          0.06       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla3/pfa3/Cin (PFA_5)         0.00       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla3/pfa3/U3/Y (XOR2X1)       0.04       0.87 f
+  pcCtrl/plus2/addlogic/cla/cla3/pfa3/Out (PFA_5)         0.00       0.87 f
+  pcCtrl/plus2/addlogic/cla/cla3/Out<2> (fourBitCLA_1)
+                                                          0.00       0.87 f
+  pcCtrl/plus2/addlogic/cla/Out<10> (sixteenBitCLA_0)     0.00       0.87 f
+  pcCtrl/plus2/addlogic/U144/Y (AOI22X1)                  0.04       0.90 r
+  pcCtrl/plus2/addlogic/U145/Y (OAI21X1)                  0.03       0.93 f
+  pcCtrl/plus2/addlogic/Out<10> (additionLogic_0)         0.00       0.93 f
+  pcCtrl/plus2/Out<10> (simpleAlu_0)                      0.00       0.93 f
+  pcCtrl/U82/Y (AOI22X1)                                  0.05       0.98 r
+  pcCtrl/U50/Y (AND2X2)                                   0.03       1.01 r
+  pcCtrl/U51/Y (INVX1)                                    0.01       1.03 f
+  pcCtrl/readAdd<10> (pc_control)                         0.00       1.03 f
+  pc[10]/d (dff_423)                                      0.00       1.03 f
+  pc[10]/U3/Y (INVX1)                                     0.00       1.03 r
+  pc[10]/U4/Y (NOR2X1)                                    0.01       1.03 f
+  pc[10]/state_reg/D (DFFPOSX1)                           0.00       1.03 f
+  data arrival time                                                  1.03
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[10]/state_reg/CLK (DFFPOSX1)                         0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: pc[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: IFIDinstructionc[6]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pc[0]/state_reg/CLK (DFFPOSX1)                          0.00 #     0.00 r
+  pc[0]/state_reg/Q (DFFPOSX1)                            0.14       0.14 f
+  pc[0]/q (dff_413)                                       0.00       0.14 f
+  instrMem/addr<0> (memory2c_1)                           0.00       0.14 f
+  instrMem/add_60/U1_1_1/YC (HAX1)                        0.06       0.21 f
+  instrMem/add_60/U1_1_2/YS (HAX1)                        0.07       0.27 f
+  instrMem/U2816/Y (OR2X1)                                0.05       0.32 f
+  instrMem/U2817/Y (INVX1)                                0.01       0.33 r
+  instrMem/U2532/Y (AND2X1)                               0.03       0.37 r
+  instrMem/U2914/Y (INVX1)                                0.17       0.53 f
+  instrMem/U4190/Y (OR2X1)                                0.07       0.60 f
+  instrMem/U4191/Y (OAI21X1)                              0.02       0.62 r
+  instrMem/U2303/Y (OR2X1)                                0.04       0.66 r
+  instrMem/U2304/Y (INVX1)                                0.02       0.68 f
+  instrMem/U4208/Y (AOI22X1)                              0.05       0.72 r
+  instrMem/U2248/Y (BUFX2)                                0.04       0.76 r
+  instrMem/U4228/Y (AOI21X1)                              0.01       0.77 f
+  instrMem/U2220/Y (BUFX2)                                0.03       0.81 f
+  instrMem/U12/Y (OR2X1)                                  0.05       0.86 f
+  instrMem/U3005/Y (AND2X1)                               0.03       0.89 f
+  instrMem/data_out<6> (memory2c_1)                       0.00       0.89 f
+  U374/Y (INVX1)                                          0.00       0.89 r
+  U455/Y (MUX2X1)                                         0.01       0.90 f
+  IFIDinstructionc[6]/d (dff_388)                         0.00       0.90 f
+  IFIDinstructionc[6]/U3/Y (INVX1)                        0.01       0.91 r
+  IFIDinstructionc[6]/U4/Y (NOR2X1)                       0.01       0.92 f
+  IFIDinstructionc[6]/state_reg/D (DFFPOSX1)              0.00       0.92 f
+  data arrival time                                                  0.92
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  IFIDinstructionc[6]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                     -0.06       0.94
+  data required time                                                 0.94
+  --------------------------------------------------------------------------
+  data required time                                                 0.94
+  data arrival time                                                 -0.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: IFIDplus2Out[14]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U17/Y (OR2X2)            0.04       0.67 r
+  pcCtrl/plus2/addlogic/cla/cla3/U3/Y (NAND3X1)           0.01       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U2/Y (BUFX2)             0.03       0.71 f
+  pcCtrl/plus2/addlogic/cla/cla3/U18/Y (AND2X2)           0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla3/U19/Y (INVX1)            0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/c4 (fourBitCLA_1)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/c0 (fourBitCLA_0)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/U23/Y (BUFX2)            0.04       0.78 r
+  pcCtrl/plus2/addlogic/cla/cla4/U1/Y (OR2X1)             0.05       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla4/U20/Y (INVX1)            0.02       0.84 f
+  pcCtrl/plus2/addlogic/cla/cla4/U32/Y (OAI21X1)          0.05       0.90 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/Cin (PFA_1)         0.00       0.90 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/U2/Y (XNOR2X1)      0.03       0.93 f
+  pcCtrl/plus2/addlogic/cla/cla4/pfa3/Out (PFA_1)         0.00       0.93 f
+  pcCtrl/plus2/addlogic/cla/cla4/Out<2> (fourBitCLA_0)
+                                                          0.00       0.93 f
+  pcCtrl/plus2/addlogic/cla/Out<14> (sixteenBitCLA_0)     0.00       0.93 f
+  pcCtrl/plus2/addlogic/U21/Y (AND2X1)                    0.03       0.96 f
+  pcCtrl/plus2/addlogic/U18/Y (OR2X1)                     0.05       1.01 f
+  pcCtrl/plus2/addlogic/Out<14> (additionLogic_0)         0.00       1.01 f
+  pcCtrl/plus2/Out<14> (simpleAlu_0)                      0.00       1.01 f
+  pcCtrl/plus2Out<14> (pc_control)                        0.00       1.01 f
+  IFIDplus2Out[14]/d (dff_411)                            0.00       1.01 f
+  IFIDplus2Out[14]/U3/Y (INVX1)                           0.00       1.02 r
+  IFIDplus2Out[14]/U4/Y (NOR2X1)                          0.01       1.02 f
+  IFIDplus2Out[14]/state_reg/D (DFFPOSX1)                 0.00       1.02 f
+  data arrival time                                                  1.02
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  IFIDplus2Out[14]/state_reg/CLK (DFFPOSX1)               0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc[7]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U20/Y (BUFX2)            0.03       0.54 r
+  pcCtrl/plus2/addlogic/cla/cla2/U21/Y (INVX1)            0.02       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U34/Y (OAI21X1)          0.06       0.62 r
+  pcCtrl/plus2/addlogic/cla/cla2/U27/Y (INVX1)            0.03       0.65 f
+  pcCtrl/plus2/addlogic/cla/cla2/U35/Y (OAI21X1)          0.06       0.71 r
+  pcCtrl/plus2/addlogic/cla/cla2/U29/Y (INVX1)            0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla2/U36/Y (OAI21X1)          0.05       0.79 r
+  pcCtrl/plus2/addlogic/cla/cla2/pfa4/Cin (PFA_8)         0.00       0.79 r
+  pcCtrl/plus2/addlogic/cla/cla2/pfa4/U2/Y (XOR2X1)       0.04       0.83 f
+  pcCtrl/plus2/addlogic/cla/cla2/pfa4/Out (PFA_8)         0.00       0.83 f
+  pcCtrl/plus2/addlogic/cla/cla2/Out<3> (fourBitCLA_2)
+                                                          0.00       0.83 f
+  pcCtrl/plus2/addlogic/cla/Out<7> (sixteenBitCLA_0)      0.00       0.83 f
+  pcCtrl/plus2/addlogic/U41/Y (AND2X1)                    0.03       0.86 f
+  pcCtrl/plus2/addlogic/U46/Y (INVX1)                     0.00       0.86 r
+  pcCtrl/plus2/addlogic/U76/Y (AND2X2)                    0.03       0.89 r
+  pcCtrl/plus2/addlogic/U77/Y (INVX1)                     0.03       0.91 f
+  pcCtrl/plus2/addlogic/Out<7> (additionLogic_0)          0.00       0.91 f
+  pcCtrl/plus2/Out<7> (simpleAlu_0)                       0.00       0.91 f
+  pcCtrl/U14/Y (AOI22X1)                                  0.05       0.96 r
+  pcCtrl/U73/Y (AND2X2)                                   0.03       0.99 r
+  pcCtrl/U74/Y (INVX1)                                    0.01       1.01 f
+  pcCtrl/readAdd<7> (pc_control)                          0.00       1.01 f
+  pc[7]/d (dff_420)                                       0.00       1.01 f
+  pc[7]/U3/Y (INVX1)                                      0.00       1.01 r
+  pc[7]/U4/Y (NOR2X1)                                     0.01       1.02 f
+  pc[7]/state_reg/D (DFFPOSX1)                            0.00       1.02 f
+  data arrival time                                                  1.02
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  pc[7]/state_reg/CLK (DFFPOSX1)                          0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -1.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: pc[1]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: IFIDinstructionb/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pc[1]/state_reg/CLK (DFFPOSX1)                          0.00 #     0.00 r
+  pc[1]/state_reg/Q (DFFPOSX1)                            0.13       0.13 f
+  pc[1]/q (dff_414)                                       0.00       0.13 f
+  instrMem/addr<1> (memory2c_1)                           0.00       0.13 f
+  instrMem/U3015/Y (INVX1)                                0.06       0.20 r
+  instrMem/U3/Y (AND2X1)                                  0.05       0.24 r
+  instrMem/U83/Y (AND2X1)                                 0.03       0.28 r
+  instrMem/U2252/Y (INVX2)                                0.16       0.44 f
+  instrMem/U3347/Y (OR2X1)                                0.07       0.51 f
+  instrMem/U3348/Y (OAI21X1)                              0.02       0.52 r
+  instrMem/U2744/Y (OR2X1)                                0.05       0.57 r
+  instrMem/U2745/Y (INVX1)                                0.02       0.59 f
+  instrMem/U3363/Y (AOI22X1)                              0.05       0.64 r
+  instrMem/U2741/Y (BUFX2)                                0.04       0.67 r
+  instrMem/U3364/Y (AOI21X1)                              0.02       0.70 f
+  instrMem/U2395/Y (OR2X2)                                0.05       0.75 f
+  instrMem/U3025/Y (AND2X1)                               0.03       0.78 f
+  instrMem/data_out<11> (memory2c_1)                      0.00       0.78 f
+  U462/Y (MUX2X1)                                         0.05       0.82 r
+  U325/Y (AND2X1)                                         0.04       0.86 r
+  U326/Y (INVX1)                                          0.02       0.88 f
+  IFIDinstructionb/d (dff_465)                            0.00       0.88 f
+  IFIDinstructionb/U3/Y (INVX1)                           0.00       0.88 r
+  IFIDinstructionb/U4/Y (NOR2X1)                          0.01       0.89 f
+  IFIDinstructionb/state_reg/D (DFFPOSX1)                 0.00       0.89 f
+  data arrival time                                                  0.89
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  IFIDinstructionb/state_reg/CLK (DFFPOSX1)               0.00       1.00 r
+  library setup time                                     -0.05       0.95
+  data required time                                                 0.95
+  --------------------------------------------------------------------------
+  data required time                                                 0.95
+  data arrival time                                                 -0.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: IDEXwriteregsel[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: IFIDplus2Out[15]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXwriteregsel[0]/state_reg/CLK (DFFPOSX1)             0.00 #     0.00 r
+  IDEXwriteregsel[0]/state_reg/Q (DFFPOSX1)               0.11       0.11 f
+  IDEXwriteregsel[0]/q (dff_294)                          0.00       0.11 f
+  U228/Y (XOR2X1)                                         0.05       0.17 r
+  U227/Y (NOR3X1)                                         0.04       0.21 f
+  U226/Y (NAND2X1)                                        0.02       0.22 r
+  U233/Y (AND2X2)                                         0.03       0.26 r
+  U234/Y (AOI21X1)                                        0.01       0.27 f
+  U253/Y (BUFX2)                                          0.03       0.31 f
+  U255/Y (OAI21X1)                                        0.04       0.34 r
+  U254/Y (INVX1)                                          0.03       0.37 f
+  pcCtrl/stall (pc_control)                               0.00       0.37 f
+  pcCtrl/U19/Y (INVX1)                                    0.01       0.38 r
+  pcCtrl/plus2/B<1> (simpleAlu_0)                         0.00       0.38 r
+  pcCtrl/plus2/addlogic/B<1> (additionLogic_0)            0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/InB<1> (sixteenBitCLA_0)      0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/InB<1> (fourBitCLA_3)
+                                                          0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/InB (PFA_14)        0.00       0.38 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/U1/Y (AND2X2)       0.03       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/pfa2/G (PFA_14)          0.00       0.41 r
+  pcCtrl/plus2/addlogic/cla/cla1/U5/Y (INVX1)             0.02       0.43 f
+  pcCtrl/plus2/addlogic/cla/cla1/U3/Y (OAI21X1)           0.04       0.47 r
+  pcCtrl/plus2/addlogic/cla/cla1/U2/Y (OR2X2)             0.04       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla1/c4 (fourBitCLA_3)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/c0 (fourBitCLA_2)        0.00       0.51 r
+  pcCtrl/plus2/addlogic/cla/cla2/U3/Y (INVX1)             0.02       0.53 f
+  pcCtrl/plus2/addlogic/cla/cla2/U2/Y (AND2X2)            0.03       0.56 f
+  pcCtrl/plus2/addlogic/cla/cla2/U5/Y (NOR3X1)            0.02       0.58 r
+  pcCtrl/plus2/addlogic/cla/cla2/U6/Y (OR2X2)             0.04       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla2/c4 (fourBitCLA_2)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/c0 (fourBitCLA_1)        0.00       0.63 r
+  pcCtrl/plus2/addlogic/cla/cla3/U17/Y (OR2X2)            0.04       0.67 r
+  pcCtrl/plus2/addlogic/cla/cla3/U3/Y (NAND3X1)           0.01       0.68 f
+  pcCtrl/plus2/addlogic/cla/cla3/U2/Y (BUFX2)             0.03       0.71 f
+  pcCtrl/plus2/addlogic/cla/cla3/U18/Y (AND2X2)           0.03       0.74 f
+  pcCtrl/plus2/addlogic/cla/cla3/U19/Y (INVX1)            0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla3/c4 (fourBitCLA_1)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/c0 (fourBitCLA_0)        0.00       0.74 r
+  pcCtrl/plus2/addlogic/cla/cla4/U3/Y (AND2X2)            0.04       0.78 r
+  pcCtrl/plus2/addlogic/cla/cla4/U2/Y (NOR3X1)            0.02       0.80 f
+  pcCtrl/plus2/addlogic/cla/cla4/U4/Y (NOR3X1)            0.03       0.83 r
+  pcCtrl/plus2/addlogic/cla/cla4/U6/Y (OR2X2)             0.05       0.88 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/Cin (PFA_0)         0.00       0.88 r
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/U2/Y (XNOR2X1)      0.03       0.90 f
+  pcCtrl/plus2/addlogic/cla/cla4/pfa4/Out (PFA_0)         0.00       0.90 f
+  pcCtrl/plus2/addlogic/cla/cla4/Out<3> (fourBitCLA_0)
+                                                          0.00       0.90 f
+  pcCtrl/plus2/addlogic/cla/Out<15> (sixteenBitCLA_0)     0.00       0.90 f
+  pcCtrl/plus2/addlogic/U13/Y (AND2X1)                    0.03       0.94 f
+  pcCtrl/plus2/addlogic/U12/Y (INVX1)                     0.00       0.94 r
+  pcCtrl/plus2/addlogic/U2/Y (NAND3X1)                    0.01       0.94 f
+  pcCtrl/plus2/addlogic/U15/Y (INVX1)                     0.00       0.94 r
+  pcCtrl/plus2/addlogic/U16/Y (INVX1)                     0.02       0.96 f
+  pcCtrl/plus2/addlogic/Out<15> (additionLogic_0)         0.00       0.96 f
+  pcCtrl/plus2/Out<15> (simpleAlu_0)                      0.00       0.96 f
+  pcCtrl/U28/Y (INVX1)                                    0.00       0.97 r
+  pcCtrl/U30/Y (INVX1)                                    0.01       0.98 f
+  pcCtrl/plus2Out<15> (pc_control)                        0.00       0.98 f
+  IFIDplus2Out[15]/d (dff_412)                            0.00       0.98 f
+  IFIDplus2Out[15]/U3/Y (INVX1)                           0.00       0.98 r
+  IFIDplus2Out[15]/U4/Y (NOR2X1)                          0.01       0.99 f
+  IFIDplus2Out[15]/state_reg/D (DFFPOSX1)                 0.00       0.99 f
+  data arrival time                                                  0.99
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  IFIDplus2Out[15]/state_reg/CLK (DFFPOSX1)               0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: IDEXimm[0]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EXMEMsimpleALUresult[13]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IDEXimm[0]/state_reg/CLK (DFFPOSX1)                     0.00 #     0.00 r
+  IDEXimm[0]/state_reg/Q (DFFPOSX1)                       0.12       0.12 f
+  IDEXimm[0]/q (dff_302)                                  0.00       0.12 f
+  pcALU/B<0> (simpleAlu_1)                                0.00       0.12 f
+  pcALU/addlogic/B<0> (additionLogic_1)                   0.00       0.12 f
+  pcALU/addlogic/cla/InB<0> (sixteenBitCLA_1)             0.00       0.12 f
+  pcALU/addlogic/cla/cla1/InB<0> (fourBitCLA_7)           0.00       0.12 f
+  pcALU/addlogic/cla/cla1/pfa1/InB (PFA_31)               0.00       0.12 f
+  pcALU/addlogic/cla/cla1/pfa1/U1/Y (AND2X2)              0.05       0.16 f
+  pcALU/addlogic/cla/cla1/pfa1/G (PFA_31)                 0.00       0.16 f
+  pcALU/addlogic/cla/cla1/U28/Y (INVX1)                   0.00       0.16 r
+  pcALU/addlogic/cla/cla1/U30/Y (OAI21X1)                 0.02       0.18 f
+  pcALU/addlogic/cla/cla1/U4/Y (AND2X2)                   0.04       0.22 f
+  pcALU/addlogic/cla/cla1/U18/Y (INVX1)                   0.00       0.22 r
+  pcALU/addlogic/cla/cla1/U6/Y (AND2X2)                   0.03       0.25 r
+  pcALU/addlogic/cla/cla1/U2/Y (NOR3X1)                   0.02       0.27 f
+  pcALU/addlogic/cla/cla1/U3/Y (OR2X2)                    0.04       0.31 f
+  pcALU/addlogic/cla/cla1/U5/Y (OR2X2)                    0.05       0.36 f
+  pcALU/addlogic/cla/cla1/c4 (fourBitCLA_7)               0.00       0.36 f
+  pcALU/addlogic/cla/cla2/c0 (fourBitCLA_6)               0.00       0.36 f
+  pcALU/addlogic/cla/cla2/U30/Y (OAI21X1)                 0.05       0.41 r
+  pcALU/addlogic/cla/cla2/U1/Y (AND2X2)                   0.03       0.44 r
+  pcALU/addlogic/cla/cla2/U4/Y (INVX1)                    0.02       0.46 f
+  pcALU/addlogic/cla/cla2/U34/Y (NAND3X1)                 0.03       0.49 r
+  pcALU/addlogic/cla/cla2/U3/Y (BUFX2)                    0.04       0.52 r
+  pcALU/addlogic/cla/cla2/U35/Y (NAND3X1)                 0.01       0.53 f
+  pcALU/addlogic/cla/cla2/U14/Y (BUFX2)                   0.04       0.57 f
+  pcALU/addlogic/cla/cla2/c4 (fourBitCLA_6)               0.00       0.57 f
+  pcALU/addlogic/cla/cla3/c0 (fourBitCLA_5)               0.00       0.57 f
+  pcALU/addlogic/cla/cla3/U31/Y (OAI21X1)                 0.05       0.61 r
+  pcALU/addlogic/cla/cla3/U1/Y (AND2X2)                   0.03       0.65 r
+  pcALU/addlogic/cla/cla3/U4/Y (INVX1)                    0.02       0.66 f
+  pcALU/addlogic/cla/cla3/U35/Y (NAND3X1)                 0.03       0.69 r
+  pcALU/addlogic/cla/cla3/U3/Y (BUFX2)                    0.04       0.73 r
+  pcALU/addlogic/cla/cla3/U36/Y (NAND3X1)                 0.01       0.74 f
+  pcALU/addlogic/cla/cla3/U14/Y (INVX1)                   0.00       0.74 r
+  pcALU/addlogic/cla/cla3/U15/Y (INVX1)                   0.02       0.75 f
+  pcALU/addlogic/cla/cla3/c4 (fourBitCLA_5)               0.00       0.75 f
+  pcALU/addlogic/cla/cla4/c0 (fourBitCLA_4)               0.00       0.75 f
+  pcALU/addlogic/cla/cla4/U15/Y (AND2X2)                  0.04       0.79 f
+  pcALU/addlogic/cla/cla4/U16/Y (INVX1)                   0.00       0.79 r
+  pcALU/addlogic/cla/cla4/U1/Y (AND2X1)                   0.04       0.83 r
+  pcALU/addlogic/cla/cla4/U21/Y (INVX1)                   0.03       0.86 f
+  pcALU/addlogic/cla/cla4/pfa2/Cin (PFA_18)               0.00       0.86 f
+  pcALU/addlogic/cla/cla4/pfa2/U2/Y (XOR2X1)              0.03       0.89 f
+  pcALU/addlogic/cla/cla4/pfa2/Out (PFA_18)               0.00       0.89 f
+  pcALU/addlogic/cla/cla4/Out<1> (fourBitCLA_4)           0.00       0.89 f
+  pcALU/addlogic/cla/Out<13> (sixteenBitCLA_1)            0.00       0.89 f
+  pcALU/addlogic/U11/Y (AND2X1)                           0.03       0.92 f
+  pcALU/addlogic/U12/Y (INVX1)                            0.00       0.92 r
+  pcALU/addlogic/U117/Y (AND2X2)                          0.03       0.95 r
+  pcALU/addlogic/U118/Y (INVX1)                           0.02       0.97 f
+  pcALU/addlogic/Out<13> (additionLogic_1)                0.00       0.97 f
+  pcALU/Out<13> (simpleAlu_1)                             0.00       0.97 f
+  EXMEMsimpleALUresult[13]/d (dff_227)                    0.00       0.97 f
+  EXMEMsimpleALUresult[13]/U3/Y (INVX1)                   0.00       0.97 r
+  EXMEMsimpleALUresult[13]/U4/Y (NOR2X1)                  0.01       0.98 f
+  EXMEMsimpleALUresult[13]/state_reg/D (DFFPOSX1)         0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  EXMEMsimpleALUresult[13]/state_reg/CLK (DFFPOSX1)       0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[11]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U2860/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U901/Y (OR2X1)                                  0.04       0.77 r
+  dataMem/U926/Y (INVX1)                                  0.02       0.79 f
+  dataMem/U2877/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U105/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U2878/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U2879/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2497/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<11> (memory2c_0)                       0.00       0.97 f
+  MEMWBmemDataOut[11]/d (dff_206)                         0.00       0.97 f
+  MEMWBmemDataOut[11]/U3/Y (INVX1)                        0.00       0.97 r
+  MEMWBmemDataOut[11]/U4/Y (NOR2X1)                       0.01       0.98 f
+  MEMWBmemDataOut[11]/state_reg/D (DFFPOSX1)              0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[11]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[12]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U2939/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U983/Y (OR2X1)                                  0.04       0.77 r
+  dataMem/U985/Y (INVX1)                                  0.02       0.79 f
+  dataMem/U2956/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U107/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U2957/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U2958/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2498/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<12> (memory2c_0)                       0.00       0.97 f
+  MEMWBmemDataOut[12]/d (dff_207)                         0.00       0.97 f
+  MEMWBmemDataOut[12]/U3/Y (INVX1)                        0.00       0.97 r
+  MEMWBmemDataOut[12]/U4/Y (NOR2X1)                       0.01       0.98 f
+  MEMWBmemDataOut[12]/state_reg/D (DFFPOSX1)              0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[12]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[14]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U3097/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U1127/Y (OR2X1)                                 0.04       0.77 r
+  dataMem/U1152/Y (INVX1)                                 0.02       0.79 f
+  dataMem/U3114/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U111/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U3115/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U3116/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2500/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<14> (memory2c_0)                       0.00       0.97 f
+  MEMWBmemDataOut[14]/d (dff_209)                         0.00       0.97 f
+  MEMWBmemDataOut[14]/U3/Y (INVX1)                        0.00       0.97 r
+  MEMWBmemDataOut[14]/U4/Y (NOR2X1)                       0.01       0.98 f
+  MEMWBmemDataOut[14]/state_reg/D (DFFPOSX1)              0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[14]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[8]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U2623/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U676/Y (OR2X1)                                  0.04       0.77 r
+  dataMem/U701/Y (INVX1)                                  0.02       0.79 f
+  dataMem/U2640/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U99/Y (BUFX2)                                   0.04       0.87 r
+  dataMem/U2641/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U2642/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2494/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<8> (memory2c_0)                        0.00       0.97 f
+  MEMWBmemDataOut[8]/d (dff_203)                          0.00       0.97 f
+  MEMWBmemDataOut[8]/U3/Y (INVX1)                         0.00       0.97 r
+  MEMWBmemDataOut[8]/U4/Y (NOR2X1)                        0.01       0.98 f
+  MEMWBmemDataOut[8]/state_reg/D (DFFPOSX1)               0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[8]/state_reg/CLK (DFFPOSX1)             0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[9]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U2702/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U758/Y (OR2X1)                                  0.04       0.77 r
+  dataMem/U760/Y (INVX1)                                  0.02       0.79 f
+  dataMem/U2719/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U101/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U2720/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U2721/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2495/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<9> (memory2c_0)                        0.00       0.97 f
+  MEMWBmemDataOut[9]/d (dff_204)                          0.00       0.97 f
+  MEMWBmemDataOut[9]/U3/Y (INVX1)                         0.00       0.97 r
+  MEMWBmemDataOut[9]/U4/Y (NOR2X1)                        0.01       0.98 f
+  MEMWBmemDataOut[9]/state_reg/D (DFFPOSX1)               0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[9]/state_reg/CLK (DFFPOSX1)             0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[10]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U2781/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U842/Y (OR2X1)                                  0.04       0.77 r
+  dataMem/U843/Y (INVX1)                                  0.02       0.79 f
+  dataMem/U2798/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U103/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U2799/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U2800/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2496/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<10> (memory2c_0)                       0.00       0.97 f
+  MEMWBmemDataOut[10]/d (dff_205)                         0.00       0.97 f
+  MEMWBmemDataOut[10]/U3/Y (INVX1)                        0.00       0.97 r
+  MEMWBmemDataOut[10]/U4/Y (NOR2X1)                       0.01       0.98 f
+  MEMWBmemDataOut[10]/state_reg/D (DFFPOSX1)              0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[10]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: EXMEMmainALUresult[2]/state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MEMWBmemDataOut[13]/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXMEMmainALUresult[2]/state_reg/CLK (DFFPOSX1)          0.00 #     0.00 r
+  EXMEMmainALUresult[2]/state_reg/Q (DFFPOSX1)            0.13       0.13 f
+  EXMEMmainALUresult[2]/q (dff_280)                       0.00       0.13 f
+  dataMem/addr<2> (memory2c_0)                            0.00       0.13 f
+  dataMem/U2560/Y (NOR2X1)                                0.04       0.18 r
+  dataMem/U75/Y (AND2X2)                                  0.03       0.21 r
+  dataMem/U617/Y (INVX1)                                  0.36       0.57 f
+  dataMem/U3018/Y (OAI21X1)                               0.17       0.73 r
+  dataMem/U1068/Y (OR2X1)                                 0.04       0.77 r
+  dataMem/U1069/Y (INVX1)                                 0.02       0.79 f
+  dataMem/U3035/Y (AOI22X1)                               0.05       0.83 r
+  dataMem/U109/Y (BUFX2)                                  0.04       0.87 r
+  dataMem/U3036/Y (AOI21X1)                               0.02       0.89 f
+  dataMem/U3037/Y (OR2X1)                                 0.05       0.94 f
+  dataMem/U2499/Y (AND2X1)                                0.03       0.97 f
+  dataMem/data_out<13> (memory2c_0)                       0.00       0.97 f
+  MEMWBmemDataOut[13]/d (dff_208)                         0.00       0.97 f
+  MEMWBmemDataOut[13]/U3/Y (INVX1)                        0.00       0.97 r
+  MEMWBmemDataOut[13]/U4/Y (NOR2X1)                       0.01       0.98 f
+  MEMWBmemDataOut[13]/state_reg/D (DFFPOSX1)              0.00       0.98 f
+  data arrival time                                                  0.98
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  MEMWBmemDataOut[13]/state_reg/CLK (DFFPOSX1)            0.00       1.00 r
+  library setup time                                      0.05       1.05
+  data required time                                                 1.05
+  --------------------------------------------------------------------------
+  data required time                                                 1.05
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+1

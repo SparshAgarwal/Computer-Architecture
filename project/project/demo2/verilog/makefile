@@ -20,3 +20,6 @@ demo2:
 test:
 	wsrun.pl -pipe -list tests/all.list  proc_hier_pbench *.v > out/tests
 
+testsingle:
+	wsrun.pl -pipe -wave -prog ~karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/$(t).asm  proc_hier_pbench *.v > out/testsingle
+

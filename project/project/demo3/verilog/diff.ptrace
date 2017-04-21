@@ -1,0 +1,6 @@
+INST:    0010 0000 0000 0000 j 0x0
+INST:    1101 1010 0110 0100 add r1, r2, r3
+ARCH:    REG: 1 VALUE: 0x0000 ***DIFF***
+VERILOG: REG: 1 VALUE: 0xxxxx
+INST:    0000 0000 0000 0000 halt
+FAIL: 1 differences
