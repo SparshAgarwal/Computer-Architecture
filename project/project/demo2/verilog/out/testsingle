@@ -19,7 +19,7 @@ Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace a
 Executing vlib __work
 Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v
 QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
-Start time: 17:18:05 on Apr 21,2017
+Start time: 19:11:59 on Apr 27,2017
 vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkrst.v dff.v extendImm.v fourBitCLA.v memory2c.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v 
 -- Compiling module PFA
 -- Compiling module additionLogic
@@ -44,7 +44,7 @@ vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_op.v clkr
 
 Top level modules:
 	proc_hier_pbench
-End time: 17:18:05 on Apr 21,2017, Elapsed time: 0:00:00
+End time: 19:11:59 on Apr 27,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -54,7 +54,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:18:06 on Apr 21,2017
+# Start time: 19:12:00 on Apr 27,2017
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -107,7 +107,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 3305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:18:07 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:12:01 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 4

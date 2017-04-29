@@ -15,7 +15,7 @@ module proc (/*AUTOARG*/
 	// None of the above lines can be modified
 	
 	wire [15:0] instrOut, pcCurrent, pcNext, plus2Out, writedata, memAluData, memDataOut, read1data, read2data, mainALUresult,mainALUresult_branch, imm, aluA, aluB, aluBtemp, read2dataTemp, aluA_branch, aluB_branch, aluBtemp_branch, sixteenZero;
-	wire [15:0] instrOut_IDEX, instrOut_IFID, instrOut_EXMEM, instrOut_MEMWB, instrOut_WBEND, plus2Out_EXMEM, plus2Out_IDEX, plus2Out_IFID, plus2Out_MEMWB, memDataOut_MEMWB, read1data_IDEX, read2data_EXMEM, read2data_IDEX, mainALUresult_EXMEM, mainALUresult_MEMWB, imm_IDEX, simpleALUResult, simpleALUResult_EXMEM, instrOutTemp;
+	wire [15:0] instrOut_IDEX, instrOut_IFID, instrOut_EXMEM, instrOut_MEMWB, instrOut_WBEND, plus2Out_EXMEM, plus2Out_IDEX, plus2Out_IFID, plus2Out_MEMWB, memDataOut_MEMWB, memDataIn, read1data_IDEX, read2data_EXMEM, read2data_IDEX, mainALUresult_EXMEM, mainALUresult_MEMWB, imm_IDEX, simpleALUResult, simpleALUResult_EXMEM, instrOutTemp;
 	wire [4:0] aluOp, op, op_branch;
 	wire [4:0] aluOp_IDEX, instrOut_IFID_final;
 	wire [2:0] addition;
@@ -23,7 +23,7 @@ module proc (/*AUTOARG*/
 	wire [2:0] writeregsel_EXMEM, writeregsel_IDEX, writeregsel_MEMWB;
 	wire [1:0] regDesSel, jriSel, inputForA, inputForB;
 	wire [1:0] regDesSel_IDEX;
-	wire halt, jump, branch, memRdEn, regWrSel, memWrEn, aluSrcSel, regWrEn, opCtrlErr, branchCon, extendSign, cin, cin_branch, invA, invB, invA_branch, invB_branch, sign, sign_branch, aluCtrlErr, aluCtrlErr_branch, data1Sel, aluErr, aluErr_branch, ofl, ofl_branch, zeroFlag, r7Sel, zero, temp1, temp2, temp3, temp4;
+	wire halt, jump, branch, memRdEn, regWrSel, memWrEn, aluSrcSel, regWrEn, opCtrlErr, branchCon, extendSign, cin, cin_branch, invA, invB, invA_branch, invB_branch, sign, sign_branch, aluCtrlErr, aluCtrlErr_branch, data1Sel, aluErr, aluErr_branch, ofl, ofl_branch, zeroFlag, r7Sel, zero, temp1, temp2, temp3, temp4, temp5;
 	wire halt_EXMEM, halt_IDEX, jump_MEMWB, jump_EXMEM, jump_IDEX, branch_MEMWB, branch_EXMEM, branch_IDEX, regWrSel_EXMEM, regWrSel_IDEX, regWrSel_MEMWB, memWrEn_EXMEM, memWrEn_IDEX, aluSrcSel_IDEX, regWrEn_EXMEM, regWrEn_IDEX, regWrEn_MEMWB, branchCon_EXMEM, branchCon_IDEX, branchCon_MEMWB, data1Sel_IDEX, r7Sel_EXMEM, r7Sel_IDEX, r7Sel_MEMWB, stall, halt_MEMWB, halt_WBEND, readEn1, readEn2, readEn1_IDEX, readEn2_IDEX, readEn1_IFID, readEn2_IFID , flush, branch_detect, branch_detect_IDEX, branch_detect_EXMEM, branch_detect_MEMWB, jump_detect, jump_detect_IDEX, jump_detect_EXMEM, jump_detect_MEMWB, memRdEn_IDEX, memRdEn_EXMEM, bypass, bypassReg;
 
   reg  data;
@@ -193,7 +193,7 @@ module proc (/*AUTOARG*/
 	dff EXMEMmainALUresult [15:0] (.q(mainALUresult_EXMEM), .d(mainALUresult), .clk(clk), .rst(rst));
 	dff EXMEMplus2Out [15:0](.q(plus2Out_EXMEM), .d(plus2Out_IDEX), .clk(clk), .rst(rst)); 
   	dff EXMEMinstrOut [15:0](.q(instrOut_EXMEM), .d(instrOut_IDEX), .clk(clk), .rst(rst));
-	dff EXMEMread2data[15:0] (.q(read2data_EXMEM), .d(read2data_IDEX), .clk(clk), .rst(rst));
+	dff EXMEMread2data[15:0] (.q(read2data_EXMEM), .d(read2dataTemp), .clk(clk), .rst(rst));
 	dff EXMEMsimpleALUresult[15:0] (.q(simpleALUResult_EXMEM), .d(simpleALUResult), .clk(clk), .rst(rst));
 	dff EXMEMwriteregsel[2:0] (.q(writeregsel_EXMEM), .d(writeregsel_IDEX), .clk(clk), .rst(rst));
  	dff EXMEMbranch_detect (.q(branch_detect_EXMEM), .d(branch_detect_IDEX), .clk(clk), .rst(rst)); 
@@ -212,8 +212,13 @@ module proc (/*AUTOARG*/
 	dff EXMEMmemRdEn(.q(memRdEn_EXMEM), .d(memRdEn_IDEX), .clk(clk), .rst(rst));
 
 	//*******************MEMORY STAGE*******************//
+
+	assign temp5 = ((instrOut_EXMEM[7:5] == writeregsel_MEMWB) & regWrEn_MEMWB & readEn2_IDEX ) ? 1 : 0;
+
+	assign memDataIn = temp5 ? memDataOut_MEMWB : read2data_EXMEM; 
+
 	//Data Memory
-	memory2c dataMem(.data_out(memDataOut), .data_in(read2data_EXMEM), .addr(mainALUresult_EXMEM), .enable(~rst), .wr(memWrEn_EXMEM), .createdump(halt_EXMEM), .clk(clk), .rst(rst));
+	memory2c dataMem(.data_out(memDataOut), .data_in(memDataIn), .addr(mainALUresult_EXMEM), .enable(~rst), .wr(memWrEn_EXMEM), .createdump(halt_EXMEM), .clk(clk), .rst(rst));
 
 	//Data Memory
 	//Done, CacheHit //TODO

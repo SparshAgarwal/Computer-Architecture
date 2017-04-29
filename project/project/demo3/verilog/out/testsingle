@@ -1,7 +1,7 @@
-Program 0 /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/bltz_0.asm
+Program 0 /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm
 -------------------------------------------------
 Step: 1
-Compiling /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/bltz_0.asm
+Compiling /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm
 Created the following files
 loadfile_0.img
 loadfile_1.img
@@ -22,9 +22,11 @@ Top module: proc_hier_pbench
 Compilation log in wsrun.log
 Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
 Executing vlib __work
+** Error: (vlib-35) Failed to create directory "__work".
+File exists. (errno = EEXIST)
 Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_branch.v alu_op.v alu_op_branch.v cache.v clkrst.v dff.v extendImm.v final_memory.v fourBitCLA.v four_bank_mem.v mem_system.v memc.v memory2c.v memory2c_align.v memv.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v rf_bypass.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v
 QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
-Start time: 17:30:08 on Apr 21,2017
+Start time: 19:40:07 on Apr 27,2017
 vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_branch.v alu_op.v alu_op_branch.v cache.v clkrst.v dff.v extendImm.v final_memory.v fourBitCLA.v four_bank_mem.v mem_system.v memc.v memory2c.v memory2c_align.v memv.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v rf_bypass.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v 
 -- Compiling module PFA
 -- Compiling module additionLogic
@@ -63,7 +65,7 @@ Top level modules:
 	memory2c_align
 	proc_hier_pbench
 	stallmem
-End time: 17:30:08 on Apr 21,2017, Elapsed time: 0:00:00
+End time: 19:40:07 on Apr 27,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -73,7 +75,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:30:09 on Apr 21,2017
+# Start time: 19:40:07 on Apr 27,2017
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -114,23 +116,26 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
 # Error
-# Error signal asserted
+# Error
+# Error
 # Error
 # Error signal asserted
 # Error signal asserted
 # Error signal asserted
+# Error
 # Error signal asserted
+# Error
 # Error signal asserted
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
-#    Time: 1205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:30:11 on Apr 21,2017, Elapsed time: 0:00:02
+#    Time: 1905 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:40:08 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 4
@@ -145,8 +150,14 @@ Running arch simulator wiscalculator...
 -------------------------------------------------
 Step: 6
 Comparing arch simulation trace against verilog simulation trace
-1a2
-> REG: 2 VALUE: 0x0014
+5,7c5,7
+< REG: 4 VALUE: 0x0002
+< REG: 1 VALUE: 0x0002
+< REG: 2 VALUE: 0x0001
+---
+> REG: 4 VALUE: 0x0000
+> REG: 1 VALUE: 0x0003
+> REG: 2 VALUE: 0x0003
 FAILED. See differences in diff.ptrace. Search for ***DIFF***
 Use kompare archsim.ptrace verilogsim.ptrace to see differences side by side.
 OR use tkdiff.tcl archsim.ptrace verilogsim.ptrace to see differences side by side.
@@ -154,5 +165,5 @@ Open dump.wlf in modelsim using, vsim -view dataset=dump.wlf
 Program source listing and raw bits are in loadfile.list. Open using gedit loadfile.lst
 -------------------------------------------------
 Final log, saved in summary.log
-/u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/bltz_0.asm FAILED
+/u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/inst_tests/beqz_0.asm FAILED
 Reading pref.tcl

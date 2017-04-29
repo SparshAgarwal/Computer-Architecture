@@ -1,3 +1,6 @@
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:44 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
 # //
@@ -13,4 +16,38 @@
 # //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
-# dump.wlf opened as dataset "dataset"
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1405 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:45 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

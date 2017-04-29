@@ -22,9 +22,11 @@ Top module: proc_hier_pbench
 Compilation log in wsrun.log
 Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
 Executing vlib __work
+** Error: (vlib-35) Failed to create directory "__work".
+File exists. (errno = EEXIST)
 Executing vlog +define+RANDSEED=3 -work __work PFA.v additionLogic.v alu.v alu_branch.v alu_op.v alu_op_branch.v cache.v clkrst.v dff.v extendImm.v final_memory.v fourBitCLA.v four_bank_mem.v mem_system.v memc.v memory2c.v memory2c_align.v memv.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v rf_bypass.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v
 QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
-Start time: 17:16:03 on Apr 21,2017
+Start time: 19:40:44 on Apr 27,2017
 vlog "+define+RANDSEED=3" -work __work PFA.v additionLogic.v alu.v alu_branch.v alu_op.v alu_op_branch.v cache.v clkrst.v dff.v extendImm.v final_memory.v fourBitCLA.v four_bank_mem.v mem_system.v memc.v memory2c.v memory2c_align.v memv.v op_control.v pc_control.v proc.v proc_hier.v proc_hier_pbench.v readEnOp_Control.v reg16bit.v rf.v rf_bypass.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v 
 -- Compiling module PFA
 -- Compiling module additionLogic
@@ -63,7 +65,7 @@ Top level modules:
 	memory2c_align
 	proc_hier_pbench
 	stallmem
-End time: 17:16:04 on Apr 21,2017, Elapsed time: 0:00:01
+End time: 19:40:44 on Apr 27,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -73,7 +75,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:04 on Apr 21,2017
+# Start time: 19:40:45 on Apr 27,2017
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -114,7 +116,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -128,7 +130,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1605 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:06 on Apr 21,2017, Elapsed time: 0:00:02
+# End time: 19:40:46 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 4
@@ -163,7 +165,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:07 on Apr 21,2017
+# Start time: 19:40:47 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -204,7 +206,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -212,7 +214,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:07 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:47 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -247,7 +249,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:08 on Apr 21,2017
+# Start time: 19:40:48 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -288,7 +290,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -297,7 +299,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:08 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:48 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -332,7 +334,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:09 on Apr 21,2017
+# Start time: 19:40:49 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -373,7 +375,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -382,7 +384,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:10 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:40:50 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -417,7 +419,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:11 on Apr 21,2017
+# Start time: 19:40:51 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -458,14 +460,14 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:11 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:51 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -500,7 +502,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:12 on Apr 21,2017
+# Start time: 19:40:52 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -541,7 +543,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -550,7 +552,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:12 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:52 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -585,7 +587,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:13 on Apr 21,2017
+# Start time: 19:40:53 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -626,7 +628,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -634,7 +636,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:13 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:54 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -669,7 +671,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:14 on Apr 21,2017
+# Start time: 19:40:55 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -710,7 +712,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -720,7 +722,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:15 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:40:55 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -755,7 +757,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:16 on Apr 21,2017
+# Start time: 19:40:56 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -796,7 +798,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -807,7 +809,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:16 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:57 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -842,7 +844,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:17 on Apr 21,2017
+# Start time: 19:40:58 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -883,7 +885,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -892,7 +894,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:17 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:40:58 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -927,7 +929,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:18 on Apr 21,2017
+# Start time: 19:40:59 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -968,14 +970,14 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:19 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:40:59 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1010,7 +1012,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:20 on Apr 21,2017
+# Start time: 19:41:00 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1051,14 +1053,14 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:20 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:00 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1093,7 +1095,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:21 on Apr 21,2017
+# Start time: 19:41:01 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1134,7 +1136,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1143,7 +1145,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:21 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:02 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1178,7 +1180,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:22 on Apr 21,2017
+# Start time: 19:41:03 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1219,7 +1221,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1228,7 +1230,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:22 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:03 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1263,7 +1265,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:23 on Apr 21,2017
+# Start time: 19:41:04 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1304,7 +1306,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1313,7 +1315,7 @@ Reading pref.tcl
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:24 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:04 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1348,7 +1350,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:24 on Apr 21,2017
+# Start time: 19:41:05 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1389,7 +1391,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1399,9 +1401,7 @@ Reading pref.tcl
 # Error
 # Error
 # Error signal asserted
-# Error
 # Error signal asserted
-# Error
 # Error signal asserted
 # Error
 # Error signal asserted
@@ -1410,7 +1410,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1905 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:25 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:06 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1425,17 +1425,14 @@ Running arch simulator wiscalculator...
 -------------------------------------------------
 Step: 5
 Comparing arch simulation trace against verilog simulation trace
-5,7c5,6
+5,7c5,7
 < REG: 4 VALUE: 0x0002
 < REG: 1 VALUE: 0x0002
 < REG: 2 VALUE: 0x0001
 ---
+> REG: 4 VALUE: 0x0000
 > REG: 1 VALUE: 0x0003
 > REG: 2 VALUE: 0x0003
-9c8
-< REG: 4 VALUE: 0x0004
----
-> REG: 4 VALUE: 0x0005
 FAILED. See differences in diff.ptrace. Search for ***DIFF***
 Use kompare archsim.ptrace verilogsim.ptrace to see differences side by side.
 OR use tkdiff.tcl archsim.ptrace verilogsim.ptrace to see differences side by side.
@@ -1460,7 +1457,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:26 on Apr 21,2017
+# Start time: 19:41:07 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1501,7 +1498,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1517,7 +1514,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:26 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:07 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1558,7 +1555,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:27 on Apr 21,2017
+# Start time: 19:41:08 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1599,7 +1596,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1614,7 +1611,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:27 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:08 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1649,7 +1646,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:28 on Apr 21,2017
+# Start time: 19:41:09 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1690,7 +1687,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1704,7 +1701,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:28 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:10 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1739,7 +1736,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:29 on Apr 21,2017
+# Start time: 19:41:11 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1780,7 +1777,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1797,7 +1794,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:30 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:11 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1832,7 +1829,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:31 on Apr 21,2017
+# Start time: 19:41:12 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1873,7 +1870,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1885,7 +1882,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:31 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:12 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -1920,7 +1917,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:32 on Apr 21,2017
+# Start time: 19:41:14 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -1961,7 +1958,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -1975,7 +1972,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:32 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:14 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2010,7 +2007,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:33 on Apr 21,2017
+# Start time: 19:41:15 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -2051,7 +2048,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -2065,7 +2062,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:34 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:15 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2100,7 +2097,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:34 on Apr 21,2017
+# Start time: 19:41:16 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -2141,7 +2138,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -2155,7 +2152,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:35 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:16 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2190,7 +2187,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:36 on Apr 21,2017
+# Start time: 19:41:17 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -2231,7 +2228,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -2246,7 +2243,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1305 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:36 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:18 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2281,7 +2278,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:37 on Apr 21,2017
+# Start time: 19:41:19 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -2322,7 +2319,7 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
@@ -2338,7 +2335,7 @@ Reading pref.tcl
 # Error signal asserted
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:37 on Apr 21,2017, Elapsed time: 0:00:00
+# End time: 19:41:19 on Apr 27,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2379,7 +2376,7 @@ Reading pref.tcl
 # 10.4c
 
 # vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 17:16:38 on Apr 21,2017
+# Start time: 19:41:20 on Apr 27,2017
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.4c linux Jul 19 2015
@@ -2420,14 +2417,14 @@ Reading pref.tcl
 # Loading work.alu(fast)
 # Loading work.shifter(fast)
 # log -howmany -rec /* 
-# 3629
+# 3631
 #  run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # Error
 # ** Note: $finish    : proc_hier_pbench.v(115)
 #    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 17:16:39 on Apr 21,2017, Elapsed time: 0:00:01
+# End time: 19:41:21 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 -------------------------------------------------
 Step: 3
@@ -2447,6 +2444,1458 @@ Program 27 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/in
 -------------------------------------------------
 Step: 1
 Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_1.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:22 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:22 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_1.asm.
+Program 28 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_2.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_2.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:23 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:23 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_2.asm.
+Program 29 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_3.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_3.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:24 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:25 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_3.asm.
+Program 30 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_4.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_4.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:26 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:26 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_4.asm.
+Program 31 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_5.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_5.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:27 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:28 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_5.asm.
+Program 32 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_6.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_6.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:29 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:29 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_6.asm.
+Program 33 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_7.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_7.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:30 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:31 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_7.asm.
+Program 34 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_8.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_8.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:32 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:32 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/btr_8.asm.
+Program 35 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_0.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_0.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:33 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1505 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:33 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_0.asm.
+Program 36 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_1.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_1.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:34 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1505 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:35 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_1.asm.
+Program 37 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_2.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_2.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:36 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:36 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+1c1
+< REG: 1 VALUE: 0x0000
+---
+> REG: 1 VALUE: 0xxxxx
+FAILED. See differences in diff.ptrace. Search for ***DIFF***
+Use kompare archsim.ptrace verilogsim.ptrace to see differences side by side.
+OR use tkdiff.tcl archsim.ptrace verilogsim.ptrace to see differences side by side.
+Open dump.wlf in modelsim using, vsim -view dataset=dump.wlf
+Program source listing and raw bits are in loadfile.list. Open using gedit loadfile.lst
+Program 38 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_3.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_3.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:37 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:37 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_3.asm.
+Program 39 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_4.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/j_4.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:39 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error signal asserted
+# Error
+# Error signal asserted
+# Error signal asserted
+# Error signal asserted
+# Error signal asserted
+# Error signal asserted
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1605 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:39 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+4d3
+< REG: 1 VALUE: 0x0000
+FAILED. See differences in diff.ptrace. Search for ***DIFF***
+Use kompare archsim.ptrace verilogsim.ptrace to see differences side by side.
+OR use tkdiff.tcl archsim.ptrace verilogsim.ptrace to see differences side by side.
+Open dump.wlf in modelsim using, vsim -view dataset=dump.wlf
+Program source listing and raw bits are in loadfile.list. Open using gedit loadfile.lst
+Program 40 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_0.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_0.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:41 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1105 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:41 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_0.asm.
+Program 41 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_10.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_10.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:42 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1005 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:42 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_10.asm.
+Program 42 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_11.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_11.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:43 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1505 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:43 on Apr 27,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_11.asm.
+Program 43 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_12.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_12.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 19:41:44 on Apr 27,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.memory2c(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.dff(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# log -howmany -rec /* 
+# 3631
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 1405 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 19:41:45 on Apr 27,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 4
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 5
+Comparing arch simulation trace against verilog simulation trace
+SUCCESS. Simulations match for /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_12.asm.
+Program 44 /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_15.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu//courses/cs552/spring2013/handouts/testprograms/public/inst_tests/jal_15.asm
 Created the following files
 loadfile_0.img
 loadfile_1.img
