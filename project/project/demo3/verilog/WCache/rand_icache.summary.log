@@ -1,0 +1,8 @@
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_1_icache.asm SUCCESS CPI:107.1 CYCLES:4501 ICOUNT:42 IHITRATE: 18.7 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_2_icache.asm SUCCESS CPI:77.9 CYCLES:4597 ICOUNT:59 IHITRATE: 18.2 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_3_icache.asm SUCCESS CPI:69.7 CYCLES:4533 ICOUNT:65 IHITRATE: 18.4 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_4_icache.asm SUCCESS CPI:79.8 CYCLES:4549 ICOUNT:57 IHITRATE: 18.4 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_5_icache.asm SUCCESS CPI:84.1 CYCLES:4541 ICOUNT:54 IHITRATE: 18.8 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_6_icache.asm SUCCESS CPI:86.5 CYCLES:4501 ICOUNT:52 IHITRATE: 18.5 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_7_icache.asm SUCCESS CPI:77.0 CYCLES:4541 ICOUNT:59 IHITRATE: 18.9 DHITRATE: 0
+/u/k/a/karu/courses/cs552/spring2013/handouts/testprograms/public/rand_icache/t_8_icache.asm SUCCESS CPI:76.4 CYCLES:4509 ICOUNT:59 IHITRATE: 18.9 DHITRATE: 0

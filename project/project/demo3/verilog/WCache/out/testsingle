@@ -1,0 +1,2081 @@
+Program 0 /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/rand_ldst/ldld_rand_large_6.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/rand_ldst/ldld_rand_large_6.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+Skipping final_memory.syn.v, seems like a file meant for synthesis
+Skipping memc.syn.v, seems like a file meant for synthesis
+Skipping memory2c_align.syn.v, seems like a file meant for synthesis
+Skipping memory2c.syn.v, seems like a file meant for synthesis
+Skipping memv.syn.v, seems like a file meant for synthesis
+Skipping stallmem.syn.v, seems like a file meant for synthesis
+-------------------------------------------------
+Step: 2
+Compiling the following verilog files: additionLogic.v alu_branch.v alu_op_branch.v alu_op.v alu.v cache.v clkrst.v data_mem_system.v dff.v extendImm.v final_memory.v four_bank_mem.v fourBitCLA.v inst_mem_system.v memc.v memory2c_align.v memory2c.v mem_system.v memv.v op_control.v pc_control.v PFA.v proc_hier_pbench.v proc_hier.v proc.v readEnOp_Control.v reg16bit.v rf_bypass.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v 
+Top module: proc_hier_pbench
+Compilation log in wsrun.log
+Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
+Executing vlib __work
+Executing vlog +define+RANDSEED=3 -work __work additionLogic.v alu_branch.v alu_op_branch.v alu_op.v alu.v cache.v clkrst.v data_mem_system.v dff.v extendImm.v final_memory.v four_bank_mem.v fourBitCLA.v inst_mem_system.v memc.v memory2c_align.v memory2c.v mem_system.v memv.v op_control.v pc_control.v PFA.v proc_hier_pbench.v proc_hier.v proc.v readEnOp_Control.v reg16bit.v rf_bypass.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v
+QuestaSim vlog 10.4c Compiler 2015.07 Jul 19 2015
+Start time: 14:53:15 on May 09,2017
+vlog "+define+RANDSEED=3" -work __work additionLogic.v alu_branch.v alu_op_branch.v alu_op.v alu.v cache.v clkrst.v data_mem_system.v dff.v extendImm.v final_memory.v four_bank_mem.v fourBitCLA.v inst_mem_system.v memc.v memory2c_align.v memory2c.v mem_system.v memv.v op_control.v pc_control.v PFA.v proc_hier_pbench.v proc_hier.v proc.v readEnOp_Control.v reg16bit.v rf_bypass.v rf.v shifter.v simpleAlu.v sixteenBitCLA.v stallmem.v 
+-- Compiling module additionLogic
+-- Compiling module alu_branch
+-- Compiling module alu_op_branch
+-- Compiling module alu_op
+-- Compiling module alu
+-- Compiling module cache
+-- Compiling module clkrst
+-- Compiling module data_mem_system
+-- Compiling module dff
+-- Compiling module extendImm
+-- Compiling module final_memory
+-- Compiling module four_bank_mem
+-- Compiling module fourBitCLA
+-- Compiling module inst_mem_system
+-- Compiling module memc
+-- Compiling module memory2c_align
+-- Compiling module memory2c
+-- Compiling module mem_system
+-- Compiling module memv
+-- Compiling module op_control
+-- Compiling module pc_control
+-- Compiling module PFA
+-- Compiling module proc_hier_pbench
+-- Compiling module proc_hier
+-- Compiling module proc
+-- Compiling module readEnOp_Control
+-- Compiling module reg16bit
+-- Compiling module rf_bypass
+-- Compiling module rf
+-- Compiling module shifter
+-- Compiling module simpleAlu
+-- Compiling module sixteenBitCLA
+-- Compiling module stallmem
+
+Top level modules:
+	memory2c_align
+	memory2c
+	mem_system
+	proc_hier_pbench
+	stallmem
+End time: 14:53:15 on May 09,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 3
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.4c
+
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 14:53:15 on May 09,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.4c linux Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading work.proc_hier_pbench(fast)
+# Loading work.proc_hier(fast)
+# Loading work.clkrst(fast)
+# Loading work.proc(fast)
+# Loading work.inst_mem_system(fast)
+# Loading work.dff(fast)
+# Loading work.cache(fast)
+# Loading work.memc(fast)
+# Loading work.memc(fast__1)
+# Loading work.memc(fast__2)
+# Loading work.memv(fast)
+# Loading work.cache(fast__1)
+# Loading work.four_bank_mem(fast)
+# Loading work.final_memory(fast)
+# Loading work.pc_control(fast)
+# Loading work.simpleAlu(fast)
+# Loading work.additionLogic(fast)
+# Loading work.sixteenBitCLA(fast)
+# Loading work.fourBitCLA(fast)
+# Loading work.PFA(fast)
+# Loading work.readEnOp_Control(fast)
+# Loading work.op_control(fast)
+# Loading work.rf_bypass(fast)
+# Loading work.rf(fast)
+# Loading work.reg16bit(fast)
+# Loading work.extendImm(fast)
+# Loading work.alu_op_branch(fast)
+# Loading work.alu_branch(fast)
+# Loading work.alu_op(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.data_mem_system(fast)
+# Loading work.cache(fast__2)
+# Loading work.cache(fast__3)
+# log -howmany -rec /* 
+# 6704
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# Error
+# Error
+# Error
+# Error
+# Error
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 3605 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 14:53:16 on May 09,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+-------------------------------------------------
+Step: 4
+Verilog simulation successful
+See verilogsim.log and verilogsim.ptrace for output
+Created a dump file dump.wlf.
+To view waveforms, open with
+vsim -view dataset=dump.wlf
+-------------------------------------------------
+Step: 5
+Running arch simulator wiscalculator...
+-------------------------------------------------
+Step: 6
+Comparing arch simulation trace against verilog simulation trace
+4,1918d3
+< REG: 0 VALUE: 0x0008
+< LOAD: ADDR: 0x0008 VALUE: 0x0092
+< REG: 0 VALUE: 0x0092
+< REG: 1 VALUE: 0x000a
+< LOAD: ADDR: 0x000a VALUE: 0x0200
+< REG: 1 VALUE: 0x0200
+< LOAD: ADDR: 0x0200 VALUE: 0x019c
+< REG: 1 VALUE: 0x019c
+< LOAD: ADDR: 0x019c VALUE: 0x03a0
+< REG: 1 VALUE: 0x03a0
+< LOAD: ADDR: 0x03a0 VALUE: 0x01f2
+< REG: 1 VALUE: 0x01f2
+< LOAD: ADDR: 0x01f2 VALUE: 0x0164
+< REG: 1 VALUE: 0x0164
+< LOAD: ADDR: 0x0164 VALUE: 0x006c
+< REG: 1 VALUE: 0x006c
+< REG: 0 VALUE: 0x0091
+< LOAD: ADDR: 0x006c VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0090
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x008f
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x008e
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x008d
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x008c
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x008b
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x008a
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0089
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0088
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0087
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0086
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0085
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0084
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0083
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0082
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0081
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0080
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x007f
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x007e
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x007d
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x007c
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x007b
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x007a
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0079
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0078
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0077
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0076
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0075
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0074
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0073
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0072
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0071
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0070
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x006f
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x006e
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x006d
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x006c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x006b
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x006a
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0069
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0068
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0067
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0066
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0065
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0064
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0063
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0062
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0061
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0060
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x005f
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x005e
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x005d
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x005c
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x005b
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x005a
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0059
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0058
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0057
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0056
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0055
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0054
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0053
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0052
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0051
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0050
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x004f
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x004e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x004d
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x004c
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x004b
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x004a
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0049
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0048
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0047
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0046
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0045
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0044
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0043
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0042
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0041
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0040
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x003f
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x003e
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x003d
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x003c
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x003b
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x003a
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0039
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0038
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0037
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0036
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0035
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0034
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0033
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0032
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0031
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0030
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x002f
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x002e
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x002d
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x002c
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x002b
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x002a
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0029
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0028
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0027
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0026
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0025
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0024
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0023
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0022
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0021
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0020
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x001f
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x001e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x001d
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x001c
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x001b
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x001a
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0019
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0018
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0017
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0016
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x0015
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0014
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0013
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0012
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0011
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0010
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x000f
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x000e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x000d
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x000c
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x000b
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0x000a
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< REG: 0 VALUE: 0x0009
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< REG: 0 VALUE: 0x0008
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< REG: 0 VALUE: 0x0007
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< REG: 0 VALUE: 0x0006
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< REG: 0 VALUE: 0x0005
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< REG: 0 VALUE: 0x0004
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< REG: 0 VALUE: 0x0003
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< LOAD: ADDR: 0x01f0 VALUE: 0x02d2
+< REG: 1 VALUE: 0x02d2
+< LOAD: ADDR: 0x02d2 VALUE: 0x01c0
+< REG: 1 VALUE: 0x01c0
+< LOAD: ADDR: 0x01c0 VALUE: 0x0112
+< REG: 1 VALUE: 0x0112
+< LOAD: ADDR: 0x0112 VALUE: 0x01ee
+< REG: 1 VALUE: 0x01ee
+< REG: 0 VALUE: 0x0002
+< LOAD: ADDR: 0x01ee VALUE: 0x0302
+< REG: 1 VALUE: 0x0302
+< LOAD: ADDR: 0x0302 VALUE: 0x021c
+< REG: 1 VALUE: 0x021c
+< LOAD: ADDR: 0x021c VALUE: 0x03a6
+< REG: 1 VALUE: 0x03a6
+< LOAD: ADDR: 0x03a6 VALUE: 0x0238
+< REG: 1 VALUE: 0x0238
+< LOAD: ADDR: 0x0238 VALUE: 0x0242
+< REG: 1 VALUE: 0x0242
+< LOAD: ADDR: 0x0242 VALUE: 0x017e
+< REG: 1 VALUE: 0x017e
+< REG: 0 VALUE: 0x0001
+< LOAD: ADDR: 0x017e VALUE: 0x03a2
+< REG: 1 VALUE: 0x03a2
+< LOAD: ADDR: 0x03a2 VALUE: 0x025e
+< REG: 1 VALUE: 0x025e
+< LOAD: ADDR: 0x025e VALUE: 0x0054
+< REG: 1 VALUE: 0x0054
+< LOAD: ADDR: 0x0054 VALUE: 0x02dc
+< REG: 1 VALUE: 0x02dc
+< LOAD: ADDR: 0x02dc VALUE: 0x00c8
+< REG: 1 VALUE: 0x00c8
+< LOAD: ADDR: 0x00c8 VALUE: 0x005a
+< REG: 1 VALUE: 0x005a
+< REG: 0 VALUE: 0x0000
+< LOAD: ADDR: 0x005a VALUE: 0x00b8
+< REG: 1 VALUE: 0x00b8
+< LOAD: ADDR: 0x00b8 VALUE: 0x03d4
+< REG: 1 VALUE: 0x03d4
+< LOAD: ADDR: 0x03d4 VALUE: 0x012a
+< REG: 1 VALUE: 0x012a
+< LOAD: ADDR: 0x012a VALUE: 0x031e
+< REG: 1 VALUE: 0x031e
+< LOAD: ADDR: 0x031e VALUE: 0x00b4
+< REG: 1 VALUE: 0x00b4
+< LOAD: ADDR: 0x00b4 VALUE: 0x01f0
+< REG: 1 VALUE: 0x01f0
+< REG: 0 VALUE: 0xffff
+FAILED. See differences in diff.ptrace. Search for ***DIFF***
+Use kompare archsim.ptrace verilogsim.ptrace to see differences side by side.
+OR use tkdiff.tcl archsim.ptrace verilogsim.ptrace to see differences side by side.
+Open dump.wlf in modelsim using, vsim -view dataset=dump.wlf
+Program source listing and raw bits are in loadfile.list. Open using gedit loadfile.lst
+-------------------------------------------------
+Final log, saved in summary.log
+/u/k/a/karu/courses/cs552/spring2016/handouts/testprograms/public/rand_ldst/ldld_rand_large_6.asm FAILED
+Reading pref.tcl
